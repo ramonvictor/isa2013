@@ -1,0 +1,94 @@
+#hd-wrapper{
+	background: url(i/pattern-header.png) repeat-x center 58px;
+}
+
+#hd{
+	height: 230px;
+	.place-date{
+		font-size: 15px;
+		color: #505d65;
+		padding-left: 6px;
+	}
+	.vcard{
+		float: left;
+		width: 290px;
+		padding: 8px 15px;
+		background: #fff;
+	}
+}
+
+.isa13-social{
+	float: right;
+	padding-top: 20px;
+	li{
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.languages-nav{
+	float: left;
+	margin-left: 320px;
+	li{
+		font-family: Roboto;
+		font-weight: 700;
+		font-size: 10px;
+		text-transform: uppercase;
+		float: left;
+		>a{
+			color: #ccc;
+			padding: 0 10px;
+			display: block;
+			@include vertical-align(58px);
+			&:hover{
+				color: $green;
+			}
+		}
+		&.current{
+			>a{
+				color: $green;
+				background: $melon-green-lighter;
+			}
+		}
+	}
+}
+
+.register-wrapper{
+	padding-top: 26px;
+}
+
+#main-nav{
+	padding-top: 15px;
+	background: url(i/gray-nav-border.png) repeat-x 0 bottom;
+	> ul{
+		width: 100%;
+	}
+	li{
+		float: left;
+		font-family: Roboto;
+		margin-right: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		a{
+			color: #999;
+			display: block;
+			@include vertical-align(32px);
+			&:hover{
+				color: $green-darker;
+			}
+		}
+		&.current{
+			a{
+				color: $green-darker;
+				border-bottom: 1px solid $green;
+			}
+		}
+		&.right{
+			float: right;
+			margin-right: 0;
+			a{
+				color: $orange;
+			}
+		}
+	}
+}

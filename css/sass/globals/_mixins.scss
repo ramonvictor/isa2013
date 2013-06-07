@@ -8,3 +8,13 @@
   width: $w;
   height: $h;
 }
+
+
+@mixin new-icon ( $icon-name ){
+	.#{$icon-name} {
+		@include icons-sprite( $icon-name );
+		width: icons-sprite-width( $icon-name );
+		height: icons-sprite-height( $icon-name );
+		display: inline-block;
+	}
+}

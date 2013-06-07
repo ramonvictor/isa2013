@@ -1,8 +1,8 @@
 /* ===================================
- * Project:  <Name it>
- * Company:  <Name it>
+ * Project:  Interaction South America 2013
+ * Company:  IxDA Recife
  * Author:   Ramon Victor
- * Date:     03/2013
+ * Date:     06/2013
  * ===================================
  */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, big, cite, code, em, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, header, nav, article, section, dialog, figure, aside, footer {
@@ -53,7 +53,7 @@ abbr[title] {
 }
 
 b, strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 blockquote {
@@ -130,12 +130,14 @@ html {
 body {
   font-size: 13px;
   line-height: 1;
+  background: url(i/body-pattern.png) no-repeat center 154px;
 }
 
 body, button, input, select, textarea {
   font-family: "Roboto Slab", Georgia, Arial;
   color: #333333;
   font-size: 13px;
+  font-weight: 400;
 }
 
 ::-moz-selection {
@@ -151,7 +153,7 @@ body, button, input, select, textarea {
 }
 
 a {
-  color: blue;
+  color: #f76443;
   text-decoration: none;
   -webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
@@ -182,15 +184,187 @@ p {
   margin-bottom: .7em;
 }
 
-.sample-icon {
-  margin: 0 auto;
-  display: block;
-  width: 20px;
-  height: 20px;
+.icons-sprite, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
+  background: url('i/icons-sc4f165c628.png') no-repeat;
 }
 
-#main-content {
-  padding-top: 80px;
+.icon-facebook {
+  background-position: 0 -100px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.icon-gplus {
+  background-position: 0 -20px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.icon-linkedin {
+  background-position: 0 -80px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.icon-rss {
+  background-position: 0 -40px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.icon-share {
+  background-position: 0 -60px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.icon-twitter {
+  background-position: 0 0;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+#hd-wrapper {
+  background: url(i/pattern-header.png) repeat-x center 58px;
+}
+
+#hd {
+  height: 230px;
+}
+#hd .place-date {
+  font-size: 15px;
+  color: #505d65;
+  padding-left: 6px;
+}
+#hd .vcard {
+  float: left;
+  width: 290px;
+  padding: 8px 15px;
+  background: #fff;
+}
+
+.isa13-social {
+  float: right;
+  padding-top: 20px;
+}
+.isa13-social li {
+  float: left;
+  margin-right: 10px;
+}
+
+.languages-nav {
+  float: left;
+  margin-left: 320px;
+}
+.languages-nav li {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  float: left;
+}
+.languages-nav li > a {
+  color: #ccc;
+  padding: 0 10px;
+  display: block;
+  height: 58px;
+  line-height: 58px;
+}
+.languages-nav li > a:hover {
+  color: #339999;
+}
+.languages-nav li.current > a {
+  color: #339999;
+  background: #ecefbb;
+}
+
+.register-wrapper {
+  padding-top: 26px;
+}
+
+#main-nav {
+  padding-top: 15px;
+  background: url(i/gray-nav-border.png) repeat-x 0 bottom;
+}
+#main-nav > ul {
+  width: 100%;
+}
+#main-nav li {
+  float: left;
+  font-family: Roboto;
+  margin-right: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#main-nav li a {
+  color: #999;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+}
+#main-nav li a:hover {
+  color: #163c3c;
+}
+#main-nav li.current a {
+  color: #163c3c;
+  border-bottom: 1px solid #339999;
+}
+#main-nav li.right {
+  float: right;
+  margin-right: 0;
+}
+#main-nav li.right a {
+  color: #f76443;
+}
+
+.speakers-list > li {
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+}
+.speakers-list > li img {
+  display: block;
+  margin-bottom: 10px;
+}
+.speakers-list > li:last-child {
+  margin-right: 0;
+}
+
+.speaker-box {
+  display: block;
+  position: relative;
+}
+.speaker-box .name {
+  display: block;
+  color: #99cc00;
+  margin-bottom: 3px;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+.speaker-box .country {
+  display: block;
+  color: #999;
+}
+.speaker-box:hover:after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #f76443;
+  position: absolute;
+  left: 0;
+  top: 196px;
+}
+.speaker-box:hover .name {
+  color: #f76443;
 }
 
 #wrap-carrossel {
@@ -226,6 +400,46 @@ p {
 .jcarousel-next-disabled, .jcarousel-prev-disabled {
   cursor: default;
   background: none;
+}
+
+.centered {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.c-melon-green {
+  color: #99cc00;
+}
+
+.c-gray {
+  color: #999;
+}
+
+.big-btn {
+  background: #f76443;
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 0 21px;
+  height: 70px;
+  line-height: 70px;
+  text-shadow: 1px 1px 3px rgba(161, 60, 38, 0.75);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.big-btn:hover {
+  background: #dc593b;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-16 {
+  font-size: 16px;
 }
 
 .hide {

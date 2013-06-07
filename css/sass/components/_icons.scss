@@ -1,4 +1,6 @@
-.sample-icon{
-	margin: 0 auto;
-	@include box-dimentions(20px,20px);
+@import "icons/*.png";
+
+
+@each $name in icon-facebook, icon-gplus, icon-linkedin, icon-rss, icon-share, icon-twitter {
+	@include new-icon( $name );
 }

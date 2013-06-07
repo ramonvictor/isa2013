@@ -1,0 +1,43 @@
+.speakers-list{
+	>li{
+		float: left;
+		width: 150px;
+		margin-right: 10px;
+		img{
+			display: block;
+			margin-bottom: 10px;			
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+.speaker-box{
+	display: block;
+	position: relative;
+	.name {
+		display: block;
+		color: $melon-green;
+		margin-bottom: 3px;
+		@include single-transition(color, .2s, linear);
+	}
+	.country{
+		display: block;
+		color: #999;
+	}
+	&:hover{
+		&:after{
+			content: '';
+			display: block;
+			height: 4px;
+			width: 100%;
+			background: $orange;
+			position: absolute;
+			left: 0;
+			top: 196px;
+		}
+		.name{
+			color: $orange;
+		}
+	}
+}

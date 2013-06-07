@@ -1,19 +1,17 @@
-@import "compass/css3/transition";
-
-$default-link: blue;
-
 html {
   font-size: 100%;
   overflow-y: scroll;
 }
 body {
   font-size: 13px;
-  line-height: 1
+  line-height: 1;
+  background: url(i/body-pattern.png) no-repeat center 154px;
 }
 body, button, input, select, textarea {
   font-family: $global-font-family;
   color: $global-font-color;
   font-size: $global-font-size;
+  font-weight: 400;
 }
 ::-moz-selection {
   background: #45b2ad;
@@ -26,7 +24,7 @@ body, button, input, select, textarea {
   text-shadow: none
 }
 a {
-  color: $default-link;
+  color: $orange;
   text-decoration: none;
   @include single-transition(color, .2s, linear);
 }
