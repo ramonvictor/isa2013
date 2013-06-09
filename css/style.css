@@ -180,7 +180,7 @@ h1, h2, h3 {
 }
 
 p {
-  line-height: 130%;
+  line-height: 150%;
   margin-bottom: .7em;
 }
 
@@ -323,6 +323,10 @@ p {
   color: #f76443;
 }
 
+#main-content {
+  padding-bottom: 100px;
+}
+
 .speakers-list > li {
   float: left;
   width: 150px;
@@ -334,6 +338,10 @@ p {
 }
 .speakers-list > li:last-child {
   margin-right: 0;
+}
+
+.speakers-section {
+  margin-bottom: 50px;
 }
 
 .speaker-box {
@@ -407,6 +415,50 @@ p {
   margin: 0 auto;
 }
 
+.highlight-section {
+  width: 270px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+  padding: 15px 20px 0;
+  position: relative;
+  color: #316060;
+  border-top: 3px solid #99cc00;
+}
+.highlight-section:last-child {
+  margin-right: 0;
+}
+.highlight-section .title {
+  margin-bottom: 10px;
+}
+.highlight-section p {
+  font-size: 14px;
+}
+
+.highlight-section-btn {
+  color: #163c3c;
+  display: inline-block;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  height: 40px;
+  line-height: 40px;
+}
+
+.green-box {
+  background: #a5d6d6;
+}
+
+.light-red-box {
+  background: #f2cbc1;
+}
+
+.melon-green-box {
+  background: #d6eb99;
+}
+
 .c-melon-green {
   color: #99cc00;
 }
@@ -438,8 +490,16 @@ p {
   font-size: 12px;
 }
 
+.fs-15 {
+  font-size: 15px;
+}
+
 .fs-16 {
   font-size: 16px;
+}
+
+.fs-30 {
+  font-size: 30px;
 }
 
 .hide {

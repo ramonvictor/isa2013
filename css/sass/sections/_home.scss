@@ -1,3 +1,7 @@
+#main-content{
+	padding-bottom: 100px;
+}
+
 .speakers-list{
 	>li{
 		float: left;
@@ -12,6 +16,11 @@
 		}
 	}
 }
+
+.speakers-section{
+	margin-bottom: 50px;	
+}
+
 .speaker-box{
 	display: block;
 	position: relative;
