@@ -3,37 +3,13 @@
 	margin: 0 auto;
 }
 
-// home sections
-.highlight-section{
-	width: 310px - 40px;
-	height: 200px;
-	float: left;
-	margin-right: 10px;
-	padding: 15px 20px 0;
-	position: relative;
-	color: $green-dark;
-	border-top: 3px solid $melon-green;
-	&:last-child{
-		margin-right: 0;
-	}
-	.title{
-		margin-bottom: 10px;
-	}
-	p{
-		font-size: 14px;
-	}
+.underlined-title{
+	padding-bottom: 8px;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #f2f2f2;
 }
 
-.highlight-section-btn{
-	color: $green-darker;
-	display: inline-block;
-	padding: 0 10px;
-	position: absolute;
-	bottom: 0;
-	left: 20px;
-	background: rgba(255,255,255,.5);
-	@include vertical-align(40px);
-}
+// home sections
 
 .green-box{
 	background: #a5d6d6;
@@ -57,6 +33,19 @@
 	color: #999;
 }
 
+.c-gray-light{
+	color: #ccc;
+}
+
+.c-green{
+	color: $green;
+}
+
+// spacers
+.mb-30{
+	margin-bottom: 30px;
+}
+
 
 // btns
 .big-btn{
@@ -78,6 +67,9 @@
 .fs-12{
 	font-size: 12px;
 }
+.fs-14{
+	font-size: 14px;
+}
 .fs-15{
 	font-size: 15px;
 }
@@ -86,6 +78,18 @@
 }
 .fs-30{
 	font-size: 30px;
+}
+
+.fw-light{
+	font-weight: 300;
+}
+
+.fw-bold{
+	font-weight: 700;
+}
+
+.ff-roboto{
+	font-family: "Roboto";
 }
 
 // rv classes
@@ -99,6 +103,38 @@
   white-space: nowrap;
   overflow: hidden;
   display: block
+}
+
+
+// icon fonts
+
+@font-face {
+	font-family: 'ficons';
+	src:url('f/ficons.eot');
+	src:url('f/ficons.eot?#iefix') format('embedded-opentype'),
+		url('f/ficons.woff') format('woff'),
+		url('f/ficons.ttf') format('truetype'),
+		url('f/ficons.svg#ficons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: 'ficons';
+  content: attr(data-icon);
+  speak: none; 
+  line-height: 1;
+  font-size: 18px;
+}
+
+.icon-alone {
+  display: inline-block; 
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 // Clear fix

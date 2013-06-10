@@ -1,10 +1,14 @@
 @import "compass/css3/transition";
 @import "compass/css3/text-shadow";
+@import "compass/css3/border-radius";
 
+// globals
 
 $global-font-size: 13px;
 $global-font-family: "Roboto Slab", Georgia, Arial;
 $global-font-color: #333;
+
+// colors
 
 $green: #339999;
 $green-dark: #316060;
@@ -18,4 +22,8 @@ $melon-green-lighter: #ecefbb;
 $orange: #f76443;
 $orange-dark: #dc593b;
 
+
+//  dimentions
+
 $desktop-width: 950px;
+$column-width: 310px;

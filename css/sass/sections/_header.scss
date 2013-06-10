@@ -24,6 +24,12 @@
 		float: left;
 		margin-right: 10px;
 	}
+	.icon-alone{
+		color: #ccc;
+		&:hover{
+			color: $green;
+		}
+	}
 }
 
 .languages-nav{
