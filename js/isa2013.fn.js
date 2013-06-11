@@ -6,7 +6,11 @@
 		external.external_link();
 
 	// hover dropdown
-	// $('.dropdown-toggle').dropdownHover();
+	// hover dropdown
+	var dropdown_toggle = $('.dropdown-toggle');
+	if(dropdown_toggle.length){
+		console.log(dropdown_toggle.dropdownHover() );
+	}
 
 }(jQuery));
 

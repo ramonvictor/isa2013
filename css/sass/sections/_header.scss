@@ -61,6 +61,49 @@
 
 .register-wrapper{
 	padding-top: 26px;
+	position: relative;
+}
+
+.register-subnav{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #ec5c3c;
+	width: 278px;
+	padding: 15px 20px;
+	z-index: 5;
+	li{
+		clear: both;
+		// padding-bottom: 12px;
+		// margin-bottom: 12px;
+		border-bottom: 1px solid #fb7659;
+		&:last-child{
+			border-bottom: 0;
+			margin-bottom: 0;
+		}
+		&>a{
+			display: block;
+			color: #fff;
+			padding: 12px 0;
+			&:hover{
+				color: #f7c5bd;
+			}
+		}
+		.text{
+			display: block;
+			@include vertical-align(30px);
+		}
+	}
+	.icon{
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.register-subnav-title{
+	font-size: 21px;
+	color: #ff8b71;
+	margin-bottom: 6px;
 }
 
 #main-nav{

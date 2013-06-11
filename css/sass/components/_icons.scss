@@ -1,6 +1,6 @@
 @import "icons/*.png";
 
 
-@each $name in icon-facebook, icon-gplus, icon-linkedin, icon-rss, icon-share, icon-twitter {
+@each $name in brown-glasses-icon, brown-pencil-icon, brown-university-icon, brown-workshop-icon,  icon-facebook, icon-gplus, icon-linkedin, icon-rss, icon-share, icon-twitter {
 	@include new-icon( $name );
 }
