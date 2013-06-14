@@ -1,0 +1,21 @@
+.presentation-list{
+	&>li{
+		margin-bottom: 30px;
+	}
+	.name{
+		font-weight: bold;
+		font-size: 30px;
+	}
+	.thumb{
+		float: left;
+		margin-right: 15px;
+		border-bottom: 3px solid $melon-green;
+	}
+	.entry{
+		overflow: hidden;
+		p{
+			font-family: "Roboto";
+			font-size: 14px;
+		}
+	}
+}

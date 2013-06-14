@@ -72,6 +72,12 @@
 	width: 278px;
 	padding: 15px 20px;
 	z-index: 5;
+	opacity: 0;
+	@include single-transition(opacity, .4s, linear);
+	.open &{
+		display: block;
+		opacity: 1;
+	}
 	li{
 		clear: both;
 		// padding-bottom: 12px;
