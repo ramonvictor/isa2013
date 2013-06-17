@@ -787,6 +787,16 @@ p {
   background: none;
 }
 
+#content {
+  width: 630px;
+  float: left;
+}
+
+#sidebar {
+  width: 300px;
+  float: right;
+}
+
 .centered {
   width: 950px;
   margin: 0 auto;

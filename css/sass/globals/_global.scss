@@ -1,3 +1,13 @@
+#content{
+	width: 630px;
+	float: left;
+}
+
+#sidebar{
+	width: 300px;
+	float: right;
+}
+
 .centered{
 	width: $desktop-width;
 	margin: 0 auto;
