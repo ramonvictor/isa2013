@@ -204,6 +204,68 @@ p {
   font-size: 14px;
 }
 
+.content-title {
+  font-weight: 300;
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 120%;
+}
+
+.content-image {
+  position: relative;
+}
+.content-image img {
+  vertical-align: top;
+  display: block;
+}
+.content-image .caption {
+  color: #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 606px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.slider-nav {
+  text-align: center;
+}
+.slider-nav a {
+  width: 10px;
+  height: 10px;
+  background: url(i/slider-nav-bullet.png) no-repeat;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -50px;
+  margin: 0 2px;
+}
+.slider-nav a:hover, .slider-nav a.activeSlide {
+  background-position: right 0;
+}
+
+.content-entry {
+  font-size: 14px;
+}
+
+.sidebar-main-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #666;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #99cc00;
+  margin-bottom: 20px;
+}
+
+.attractions-list > li {
+  margin-bottom: 20px;
+  color: #666;
+}
+.attractions-list .title {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
 .icons-sprite, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
   background: url('i/icons-s57536ac101.png') no-repeat;
 }
@@ -447,6 +509,10 @@ p {
 }
 #main-nav li.right a {
   color: #f76443;
+}
+
+#main-content {
+  padding-bottom: 30px;
 }
 
 .speakers-list > li {
@@ -840,6 +906,10 @@ p {
   color: #691a09;
 }
 
+.c-orange {
+  color: #f76443;
+}
+
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -969,14 +1039,14 @@ p {
   left: -9999px;
 }
 
-.group {
+.group, #main-content {
   zoom: 1;
 }
-.group:before, .group:after {
+.group:before, #main-content:before, .group:after, #main-content:after {
   content: "";
   display: table;
 }
-.group:after {
+.group:after, #main-content:after {
   clear: both;
 }
 

@@ -1,4 +1,9 @@
 
+#main-content{
+	padding-bottom: 30px;
+	@extend .group;
+}
+
 .speakers-list{
 	>li{
 		float: left;
