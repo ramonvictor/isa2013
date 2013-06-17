@@ -27,14 +27,15 @@ a {
   color: $orange;
   text-decoration: none;
   @include single-transition(color, .2s, linear);
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,&:active {
+    outline: 0;
+    text-decoration: none;
+  }
 }
-a:focus {
-  outline: thin dotted
-}
-a:hover,a:active {
-  outline: 0;
-  text-decoration: none
-}
+
 img{
   vertical-align: middle; // avoid bottom space
 }

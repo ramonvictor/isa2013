@@ -160,11 +160,9 @@ a {
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
-
 a:focus {
   outline: thin dotted;
 }
-
 a:hover, a:active {
   outline: 0;
   text-decoration: none;
@@ -247,6 +245,20 @@ p {
 .content-entry {
   font-size: 14px;
 }
+.content-entry h2 {
+  font-family: "Roboto Slab";
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: .8em;
+  color: #339999;
+}
+.content-entry ul, .content-entry ol {
+  margin-bottom: .8em;
+}
+.content-entry li {
+  line-height: 120%;
+  margin-bottom: .5em;
+}
 
 .sidebar-main-title {
   font-size: 24px;
@@ -255,6 +267,12 @@ p {
   padding-bottom: 10px;
   border-bottom: 3px solid #99cc00;
   margin-bottom: 20px;
+}
+
+.article-sidebar-text {
+  font-size: 12px;
+  font-family: "Roboto";
+  color: #666;
 }
 
 .attractions-list > li {
@@ -966,6 +984,9 @@ p {
 .c-orange {
   color: #f76443;
 }
+.c-orange:hover {
+  color: #e4320a;
+}
 
 .mb-30 {
   margin-bottom: 30px;
@@ -1005,6 +1026,20 @@ p {
   background: #f76443;
   display: inline-block;
   padding: 5px 7px;
+}
+
+.orange-btn {
+  color: #fff;
+  padding: 12px;
+  display: inline-block;
+  background: #f76443;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.orange-btn:hover {
+  background: #f53c12;
 }
 
 .fs-11 {
