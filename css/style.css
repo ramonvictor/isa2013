@@ -266,26 +266,83 @@ p {
   margin-bottom: 6px;
 }
 
-.icons-sprite, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
-  background: url('i/icons-s57536ac101.png') no-repeat;
+.articles-date-title {
+  font-size: 16px;
+  color: #339999;
+  margin-bottom: 30px;
+}
+.articles-date-title .date-icon {
+  position: relative;
+  margin-right: 5px;
+  top: 2px;
+}
+.articles-date-title:before {
+  content: '';
+  height: 2px;
+  display: block;
+  width: 75%;
+  float: right;
+  margin-top: 8px;
+  border-bottom: 1px solid #bceaea;
+}
+
+.articles-winner-list > li {
+  width: 470px;
+  float: left;
+  margin: 0 10px 30px 0;
+}
+.articles-winner-list > li.even {
+  margin-right: 0;
+}
+.articles-winner-list > li .thumb {
+  float: left;
+  margin-right: 10px;
+}
+.articles-winner-list > li .thumb img {
+  border: 3px solid #99cc00;
+}
+.articles-winner-list > li .entry {
+  overflow: hidden;
+}
+.articles-winner-list > li .article-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+  line-height: 130%;
+}
+.articles-winner-list > li .name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.icons-sprite, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
+  background: url('i/icons-sdd35425c3e.png') no-repeat;
+}
+
+.date-icon {
+  background-position: 0 -240px;
+  width: 15px;
+  height: 16px;
+  display: inline-block;
 }
 
 .books-icon {
-  background-position: 0 -257px;
+  background-position: 0 -273px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .keynotes-icon {
-  background-position: 0 -240px;
+  background-position: 0 -256px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .videos-icon {
-  background-position: 0 -274px;
+  background-position: 0 -290px;
   width: 17px;
   height: 17px;
   display: inline-block;
