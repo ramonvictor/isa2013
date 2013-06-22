@@ -19,3 +19,142 @@
 		}
 	}
 }
+
+.content-title{
+	font-weight: 300;
+	font-size: 30px;
+	margin-bottom: 20px;
+	line-height: 120%;
+}
+
+.content-image{
+	position: relative;
+	img{
+		vertical-align: top;
+		display: block;
+	}
+	.caption{
+		color: #ccc;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 630px - 24px;
+		padding: 12px;
+		background: rgba(0,0,0,.6);
+	}
+}
+
+.slider-nav{
+	text-align: center;
+	a{
+		width: 10px;
+		height: 10px;
+		background: url(i/slider-nav-bullet.png) no-repeat;
+		display: inline-block;
+		overflow: hidden;
+		text-indent: -50px;
+		margin: 0 2px;
+
+		&:hover, &.activeSlide{
+			background-position: right 0;
+		}
+	}
+}
+.content-entry{
+	font-size: 14px;
+	h2{
+		font-family: "Roboto Slab";
+		font-weight: 600;
+		font-size: 18px;
+		margin-bottom: .8em;
+		color: $green;
+	}
+	ul,ol{
+		margin-bottom: .8em;
+	}
+	li{
+		line-height: 120%;
+		margin-bottom: .5em;
+	}
+}
+
+.sidebar-main-title{
+	font-size: 24px;
+	font-weight: 600;
+	color: #666;
+	padding-bottom: 10px;
+	border-bottom: 3px solid $melon-green;
+	margin-bottom: 20px;
+}
+
+.article-sidebar-text{
+	font-size: 12px;
+	font-family: "Roboto";
+	color: #666;
+}
+
+.attractions-list{
+	&>li{
+		margin-bottom: 20px;
+		color: #666;
+	}
+	.title{
+		font-size: 18px;
+		margin-bottom: 6px;
+	}
+}
+
+.articles-date-title{
+	font-size: 16px;
+	color: $green;
+	margin-bottom: 30px;
+	.date-icon{
+		position: relative;
+		margin-right: 5px;
+		top: 2px;
+	}
+	&:before{
+		content: '';
+		height: 2px;
+		display: block;
+		width: 75%;
+		float: right;
+		margin-top: 8px;
+		border-bottom: 1px solid #bceaea;		
+	}
+}
+
+.articles-winner-list{
+	&>li{
+		width: 470px;
+		float: left;
+		margin: 0 10px 30px 0;
+		&.even{
+			margin-right: 0;
+		}
+
+		.thumb{
+			float: left;
+			margin-right: 10px;
+			img{
+				border: 3px solid $melon-green;
+			}
+		}
+		.entry{
+			overflow: hidden;
+		}
+
+		.article-title{
+			font-weight: 600;
+			font-size: 14px;
+			margin-bottom: 5px;
+			line-height: 130%;
+		}
+
+		.name{
+			font-size: 24px;
+			font-weight: 600;
+			margin-bottom: 4px;
+		}
+	}
+}
