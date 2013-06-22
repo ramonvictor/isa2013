@@ -19,6 +19,10 @@
 	border-bottom: 1px solid #f2f2f2;
 }
 
+.circle-img{
+	@include border-radius(50%);
+}
+
 // home sections
 
 .green-box{
@@ -139,6 +143,10 @@
 
 .ff-roboto{
 	font-family: "Roboto";
+}
+
+.tt-upper{
+	text-transform: uppercase;
 }
 
 // rv classes

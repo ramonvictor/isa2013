@@ -269,6 +269,13 @@ p {
   margin-bottom: 20px;
 }
 
+.sidebar-title {
+  font-size: 30px;
+  color: #339999;
+  font-weight: 300;
+  margin-bottom: 13px;
+}
+
 .article-sidebar-text {
   font-size: 12px;
   font-family: "Roboto";
@@ -334,103 +341,257 @@ p {
   margin-bottom: 4px;
 }
 
-.icons-sprite, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
-  background: url('i/icons-sdd35425c3e.png') no-repeat;
+.facebook-users li {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+
+.twiiter-list-group {
+  background: #f5f5f5;
+  margin-bottom: 10px;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.twiiter-list-group .twitter-widget-hd, .twiiter-list-group .twitter-widget-body {
+  padding: 0;
+}
+.twiiter-list-group li {
+  padding: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.twiiter-list-group li:last-child {
+  border-bottom: none;
+}
+
+.blog-article {
+  border-bottom: 1px solid #f76443;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+.blog-article:last-child {
+  border-bottom: 0;
+}
+
+.quotation-post {
+  padding: 0;
+  margin: 0;
+}
+
+.quotation-title {
+  font-size: 60px;
+  color: #339999;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.quotation-author {
+  font-size: 16px;
+  color: #666;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.blog-article-header {
+  margin-bottom: 22px;
+}
+.blog-article-header h1 {
+  font-size: 30px;
+  line-height: 120%;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.blog-article-social {
+  float: right;
+  padding: 8px;
+}
+
+.blog-article-author {
+  position: relative;
+  left: -17.5px;
+  color: #666;
+}
+.blog-article-author .thumb {
+  margin-right: 5px;
+}
+
+.blog-article-info {
+  background: #f7f7f7;
+}
+
+.blog-article-time {
+  width: 60px;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  height: 35px;
+  line-height: 35px;
+  background: #f76443 url(i/arrow-orange-box.png) no-repeat 0 center;
+}
+
+.comment-link .comment-icon {
+  position: relative;
+  top: 5px;
+  margin-right: 3px;
+}
+
+.blog-article-entry {
+  font-size: 14px;
+}
+.blog-article-entry p, .blog-article-entry ul, .blog-article-entry ol, .blog-article-entry cite {
+  font-family: "Roboto";
+}
+.blog-article-entry h2 {
+  color: #339999;
+  font-size: 18px;
+  margin-bottom: .4em;
+}
+.blog-article-entry img {
+  margin-bottom: 5px;
+}
+
+.pagination-section {
+  background: #f76443;
+  padding: 13px;
+}
+
+.pagination-list {
+  font-size: 14px;
+}
+.pagination-list > .left, .pagination-list > .right {
+  width: 25%;
+}
+.pagination-list > .right {
+  text-align: right;
+}
+.pagination-list > .pages {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.pagination-list > .pages .current {
+  color: #661e0e;
+}
+.pagination-list > .pages a {
+  display: inline-block;
+  padding: 0 3px;
+}
+.pagination-list a {
+  color: #fff;
+}
+.pagination-list a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.icons-sprite, .comment-icon, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
+  background-image: url('i/icons-s1d2bfde1ab.png');
+  background-repeat: no-repeat;
+}
+
+.comment-icon {
+  background-position: 0 -137px;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
 }
 
 .date-icon {
-  background-position: 0 -240px;
+  background-position: 0 -154px;
   width: 15px;
   height: 16px;
   display: inline-block;
 }
 
 .books-icon {
-  background-position: 0 -273px;
+  background-position: 0 0;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .keynotes-icon {
-  background-position: 0 -256px;
-  width: 17px;
-  height: 17px;
-  display: inline-block;
-}
-
-.videos-icon {
   background-position: 0 -290px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
+.videos-icon {
+  background-position: 0 -307px;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+}
+
 .brown-glasses-icon {
-  background-position: 0 -50px;
+  background-position: 0 -17px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-pencil-icon {
-  background-position: 0 -120px;
+  background-position: 0 -47px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-university-icon {
-  background-position: 0 0;
+  background-position: 0 -77px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-workshop-icon {
-  background-position: 0 -210px;
+  background-position: 0 -107px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .icon-facebook {
-  background-position: 0 -190px;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-}
-
-.icon-gplus {
-  background-position: 0 -80px;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-}
-
-.icon-linkedin {
   background-position: 0 -170px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
+.icon-gplus {
+  background-position: 0 -190px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.icon-linkedin {
+  background-position: 0 -210px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
 .icon-rss {
-  background-position: 0 -100px;
+  background-position: 0 -230px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-share {
-  background-position: 0 -150px;
+  background-position: 0 -250px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-twitter {
-  background-position: 0 -30px;
+  background-position: 0 -270px;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -700,8 +861,6 @@ p {
   overflow: hidden;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
 }
 .twitter-widget-hd .twitter-name {
@@ -949,6 +1108,12 @@ p {
   border-bottom: 1px solid #f2f2f2;
 }
 
+.circle-img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
 .green-box {
   background: #a5d6d6;
 }
@@ -1076,6 +1241,10 @@ p {
 
 .ff-roboto, .profile-entry {
   font-family: "Roboto";
+}
+
+.tt-upper {
+  text-transform: uppercase;
 }
 
 .hide {
