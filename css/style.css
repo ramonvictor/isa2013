@@ -454,6 +454,30 @@ p {
   margin-bottom: 5px;
 }
 
+.see-also-title {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.see-also-blog {
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f76443;
+}
+.see-also-blog .column {
+  width: 48%;
+}
+.see-also-blog h1 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 7px;
+}
+.see-also-blog .author {
+  color: #999;
+  font-size: 12px;
+}
+
 .pagination-section {
   background: #f76443;
   padding: 13px;
