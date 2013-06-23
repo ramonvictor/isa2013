@@ -3,11 +3,16 @@
 	<div class="centered">
 		<section class="fb-widget clr">
 			<h1 class="title fw-light c-green">Faça parte da conferência</h1>
-			<img src="<?php echo $baseUrl; ?>/img/facebook-widget.jpg" height="68" width="951" alt="">
+			<!-- <img src="<?php echo $baseUrl; ?>/img/facebook-widget.jpg" height="68" width="951" alt=""> -->
+			<div class="hrz-facebook-widget">
+				<div class="fb-like-box" data-href="https://www.facebook.com/InteractionSouthAmerica" data-width="980" data-height="170" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+			</div>
 		</section>
 		<section class="diamond-sponsor itau-big-banner">
 			<h2 class="title c-gray fw-light">Patrocinador Diamante</h2>
 			<img src="<?php echo $baseUrl; ?>/img/itau-big-banner.jpg" height="275" width="950" alt="">
+			<a href="http://www.facebook.com/itau" class="facebook-link skip">Itaú no Facebook</a>
+			<a href="http://www.twitter.com/itau" class="twitter-link skip">Itaú no Twitter</a>
 		</section>
 		<section class="sponsors">
 			<div class="left box">
@@ -56,6 +61,14 @@
 <!--<![endif]-->
 <script src="<?php echo $baseUrl; ?>/js/hover-dropdown.min.js"></script>
 <script src="<?php echo $baseUrl; ?>/js/isa2013.fn.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <?php wp_footer(); ?>
 </body>
 </html>

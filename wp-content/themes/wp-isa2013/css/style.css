@@ -242,6 +242,17 @@ p {
   background-position: right 0;
 }
 
+.hrz-facebook-widget {
+  width: 950px;
+  height: 55px;
+  overflow: hidden;
+}
+.hrz-facebook-widget .fb-like-box {
+  position: relative;
+  top: -100px;
+  left: -10px;
+}
+
 .content-entry {
   font-size: 14px;
 }
@@ -509,6 +520,21 @@ p {
 }
 .pagination-list a:hover {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.itau-big-banner {
+  position: relative;
+}
+.itau-big-banner .facebook-link, .itau-big-banner .twitter-link {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  width: 145px;
+  height: 28px;
+}
+.itau-big-banner .twitter-link {
+  width: 125px;
+  left: 178px;
 }
 
 .icons-sprite, .comment-icon, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {

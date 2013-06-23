@@ -60,6 +60,18 @@
 		}
 	}
 }
+
+.hrz-facebook-widget{
+	width: $desktop-width;
+	height: 55px;
+	overflow: hidden;
+	.fb-like-box{
+		position: relative;
+		top: -100px;
+		left: -10px;
+	}
+}
+
 .content-entry{
 	font-size: 14px;
 	h2{
@@ -334,5 +346,20 @@
 		&:hover{
 			color: rgba(255,255,255,.7);
 		}
+	}
+}
+
+.itau-big-banner{
+	position: relative;
+	.facebook-link, .twitter-link{
+		position: absolute;
+		bottom: 18px;
+		left: 18px;
+		width: 145px;
+		height: 28px;
+	}
+	.twitter-link{
+		width: 125px;
+		left: 178px;
 	}
 }
