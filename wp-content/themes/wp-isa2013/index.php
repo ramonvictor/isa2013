@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php global $baseUrl; ?>
 	<section class="speakers-section group">
-		<h1 class="title fw-light c-green">14 palestrantes confirmados</h1>
+		<h1 class="title fw-light c-green">14 <?php _e('[:pt]palestrantes confirmados[:en]confirmed speakers[:es]ponentes confirmados'); ?></h1>
 		<ul class="speakers-list">
 			<li>
 				<a href="#" class="speaker-box">

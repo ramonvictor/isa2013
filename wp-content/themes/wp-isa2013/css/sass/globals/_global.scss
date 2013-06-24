@@ -85,6 +85,7 @@
 	font-size: 24px;
 	text-transform: uppercase;
 	padding: 0 21px;
+	min-width: 280px;
 	@include vertical-align(70px);
 	@include single-text-shadow(1px, 1px, 3px, false, rgba(161,60,38,.75));
 	@include single-transition(all, .2s, linear);

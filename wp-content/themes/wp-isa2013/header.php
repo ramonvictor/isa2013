@@ -4,11 +4,31 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="pt-br"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
 <head>
-	<?php global $baseUrl; ?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Interaction South America 13 - Recife / Brasil</title>
+	<title>
+		<?php
+			if (function_exists('is_tag') && is_tag()) {
+			 single_tag_title("Listagem de Tags para &quot;"); echo '&quot; - '; }
+			elseif (is_archive()) {
+			 wp_title(''); echo ' Arquivos - '; }
+			elseif (is_search()) {
+			 echo 'Resultado de busca por &quot;'.wp_specialchars($s).'&quot; - '; }
+			elseif (!(is_404()) && (is_single()) || (is_page())) {
+			 wp_title(''); echo ' - '; }
+			elseif (is_404()) {
+			 echo 'Página não encontrada - '; }
+			if (is_home()) {
+				wp_title(''); bloginfo('name'); /* echo ' - '; bloginfo('description'); */ }
+			else {
+			  bloginfo('name'); }
+			if ($paged>1) {
+			 echo ' - '. $paged; }
+		?>
+	</title>
+
+	<?php global $baseUrl; ?>
 
 	<!-- meta -->
 	<meta name="description" content="">
@@ -35,7 +55,7 @@
 	<script src="<?php echo $baseUrl; ?>/js/rv-modernizr.js"></script>
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?> >
 <p class="hide"><a href="#main-content" tabindex="1">Pular a navegação e ir direto para o conteúdo</a></p>
 <header id="hd-wrapper">
 	<div id="hd" class="centered">
@@ -78,29 +98,37 @@
 					</a>
 				</li>
 			</ul>
+			<?php 
+				$current_lang = qtrans_getLanguage(); 
+				global $qtranslate_slug;
+				$url_pt = $qtranslate_slug->get_current_url('pt');
+				$url_en = $qtranslate_slug->get_current_url('en');
+				$url_es = $qtranslate_slug->get_current_url('es');
+			?>
 			<ul class="languages-nav group">
-				<li class="current">
-					<a href="#">Português</a>
+				<li class="<?php echo $current_lang == 'pt' ? 'current' : ''; ?>">
+					<a href="<?php echo $url_pt; ?>">Português</a>
 				</li>
-				<li>
-					<a href="#">English</a>
+				<li class="<?php echo $current_lang == 'en' ? 'current' : ''; ?>">
+					<a href="<?php echo $url_en; ?>">English</a>
 				</li>
-				<li>
-					<a href="#">Español</a>
+				<li class="<?php echo $current_lang == 'es' ? 'current' : ''; ?>">
+					<a href="<?php echo $url_es; ?>">Español</a>
 				</li>
 			</ul>
 		</div>
 		<div class="clr group">
+			<?php global $homeUrl; ?>
 			<div class="vcard">
 				<span class="fn">
-					<a href="index.html" class="url" rel="me" title="Interaction South America 13 (Página Inicial)">
+					<a href="<?php echo $homeUrl; ?>" class="url" rel="me" title="Interaction South America 13 (Página Inicial)">
 						<img src="<?php echo $baseUrl; ?>/img/isa-2013-brand.png" height="68" width="291" alt="" />	
 						<span class="place-date"><strong>Recife</strong> / 13-16 de Novembro</span>
 					</a>
 				</span>
 			</div><!-- vcard -->
 			<nav class="register-wrapper right">
-				<a href="#" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">&raquo; Faça sua inscrição</a>
+				<a href="#" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">&raquo; <?php _e('[:pt]Faça sua inscrição[:en]Buy your ticket[:es]Hacer inscripción'); ?></a>
 				<div class="register-subnav dropdown-menu hide" role="menu">
 					<p class="register-subnav-title"><strong class="c-brown">Early Bird</strong> - até dia 21/05/13</p>
 					<ul>
@@ -124,7 +152,6 @@
 					</ul>
 				</div>
 			</nav>
-			
 			<nav id="main-nav" class="clr group">
 				<ul class="group">
 					<li class="current"><a href="index.html" title="Ir para: página inicial" tabindex="2">Home</a></li>

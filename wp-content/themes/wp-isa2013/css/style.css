@@ -717,7 +717,7 @@ p {
   top: 100%;
   left: 0;
   background: #ec5c3c;
-  width: 278px;
+  width: 282px;
   padding: 15px 20px;
   z-index: 5;
   opacity: 0;
@@ -1242,6 +1242,7 @@ p {
   font-size: 24px;
   text-transform: uppercase;
   padding: 0 21px;
+  min-width: 280px;
   height: 70px;
   line-height: 70px;
   text-shadow: 1px 1px 3px rgba(161, 60, 38, 0.75);
