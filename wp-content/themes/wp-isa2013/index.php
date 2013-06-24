@@ -75,7 +75,7 @@
 			</li>
 			<li>
 				<a href="#" class="speaker-box">
-					<img src="img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
+					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
 					<strong class="name fs-16">Jared Spool</strong>
 					<span class="country fs-12">Estados Unidos</span>
 				</a>
@@ -147,5 +147,4 @@
 			</article>			
 		</div>
 	</section>
-</div>
 <?php get_footer(); ?>

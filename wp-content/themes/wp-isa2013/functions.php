@@ -27,12 +27,12 @@ function rv_get_youtube_id( $video_url ){
 
 
 //change logo admin
-// function my_custom_login_logo() {
-//     echo '<style type="text/css">
-//         #login h1 a{height:47px;background: url('. get_bloginfo('template_url') .'/img/cultura-pe-brand.png) no-repeat center 0;background-size:262px 47px}
-//     </style>';
-// }
-// add_action('login_head', 'my_custom_login_logo');
+function rv_custom_login_logo() {
+    echo '<style type="text/css">
+        #login h1 a{height:68px;background: url('. get_bloginfo('template_url') .'/img/isa-2013-brand.png) no-repeat center 0;background-size:291px 68px}
+    </style>';
+}
+add_action('login_head', 'rv_custom_login_logo');
 
 $field = new GeneralSettings( "Facebook likebox", "fb-likebox", "text" );
 // $field = new GeneralSettings( "Twitter widget ID", "twitter-widget-id", "text" );
@@ -50,5 +50,5 @@ function get_grupos_tags(){
 add_action('init', "rv_init");
 
 function rv_init(){
-  // PostType::register("Editais","editais","Edital","M", true);
+  PostType::register("Palestras","palestras","Palestra","F", true);
 }

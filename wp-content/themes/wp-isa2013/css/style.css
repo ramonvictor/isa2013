@@ -952,6 +952,26 @@ p {
   margin-bottom: 24px;
 }
 
+.sponsors-bronze {
+  width: 633px;
+}
+
+.sponsors-bronze-list li {
+  float: left;
+  margin-right: 46px;
+}
+.sponsors-bronze-list li.last, .sponsors-bronze-list li:last-child {
+  margin-right: 0;
+}
+
+.supporters-list li {
+  float: left;
+  margin-right: 10px;
+}
+.supporters-list li:last-child {
+  margin-right: 0;
+}
+
 #ft-bar {
   background: #26404f;
   padding: 20px 0;

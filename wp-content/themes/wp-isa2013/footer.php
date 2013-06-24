@@ -1,3 +1,4 @@
+</div><!-- /#main-content -->
 <footer id="ft-wrapper">
 	<?php global $baseUrl; ?>
 	<div class="centered">
@@ -10,22 +11,38 @@
 		</section>
 		<section class="diamond-sponsor itau-big-banner">
 			<h2 class="title c-gray fw-light">Patrocinador Diamante</h2>
-			<img src="<?php echo $baseUrl; ?>/img/itau-big-banner.jpg" height="275" width="950" alt="">
+			<img src="<?php echo $baseUrl; ?>/img/sponsors/itau-big-banner.jpg" height="275" width="950" alt="">
 			<a href="http://www.facebook.com/itau" class="facebook-link skip">Itaú no Facebook</a>
 			<a href="http://www.twitter.com/itau" class="twitter-link skip">Itaú no Twitter</a>
 		</section>
 		<section class="sponsors">
-			<div class="left box">
+			<div class="left box sponsors-silver">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Prata</h3>
-				<img src="<?php echo $baseUrl; ?>/img/sponsors/rosenfeld-brand.jpg" height="82" width="310" alt="">
+				<img src="<?php echo $baseUrl; ?>/img/sponsors/silver/rosenfeld-brand.jpg" height="82" width="310" alt="">
 			</div>
-			<div class="right box">
+			<div class="right box sponsors-bronze">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Bronze</h3>
-				<img src="<?php echo $baseUrl; ?>/img/sponsors/sponsors-brand.jpg" height="82" width="629" alt="">
+				<ul class="sponsors-bronze-list group">
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/voel-brand.png" height="82" width="94" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/dt-brand.png" height="82" width="60" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/gouge-brand.png" height="82" width="105" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/wezen-brand.png" height="82" width="94" alt=""></a></li>
+					<li class="last"><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/tritone-brand.png" height="82" width="93" alt=""></a></li>
+				</ul>
 			</div>
 			<div class="clr mb-30">
 				<h4 class="underlined-title c-gray fs-14">Apoiadores</h4>
-				<img src="<?php echo $baseUrl; ?>/img/sponsors/supporters-brand.jpg" height="56" width="680" alt="">
+				<ul class="supporters-list group">
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-brand.png" height="56" width="63" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-edu-brand.png" height="56" width="63" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/2abad-brand.png" height="56" width="67" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/welab-brand.png" height="56" width="52" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/smaply-brand.png" height="56" width="56" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/robolivre-brand.png" height="56" width="95" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/gonow-brand.png" height="56" width="74" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/try-brand.png" height="56" width="51" alt=""></a></li>
+					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/pagseguro-brand.png" height="56" width="97" alt=""></a></li>
+				</ul>
 			</div>
 			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="#">#ISA13?</a> Baixe nosso Media Kit ou envie um e-mail para <a href="#">patrocinio@ixdarecife.org</a></p>
 		</section>
@@ -60,6 +77,7 @@
 <script>window.jQuery || document.write('<script src="<?php echo $baseUrl; ?>/js/jquery-2.0.0.min.js"><\/script>')</script>
 <!--<![endif]-->
 <script src="<?php echo $baseUrl; ?>/js/hover-dropdown.min.js"></script>
+<script src="<?php echo $baseUrl; ?>/js/cycle.js"></script>
 <script src="<?php echo $baseUrl; ?>/js/isa2013.fn.js"></script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

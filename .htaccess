@@ -323,8 +323,12 @@ FileETag None
 # FollowSymLinks must be enabled for this to work.
 
 <IfModule mod_rewrite.c>
-  Options +FollowSymlinks
-  RewriteEngine On
+RewriteEngine On
+RewriteBase /isa2013/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /isa2013/index.php [L]
 </IfModule>
 
 

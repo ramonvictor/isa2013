@@ -159,6 +159,30 @@
 	}
 }
 
+.sponsors-bronze{
+	width: 633px;
+}
+
+.sponsors-bronze-list{
+	li{
+		float: left;
+		margin-right: 46px;
+		&.last, &:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.supporters-list{
+	li{
+		float: left;
+		margin-right: 10px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
 #ft-bar{
 	background: #26404f;
 	padding: 20px 0;
