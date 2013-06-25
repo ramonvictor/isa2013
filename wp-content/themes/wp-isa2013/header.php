@@ -29,6 +29,7 @@
 	</title>
 
 	<?php global $baseUrl; ?>
+	<?php global $homeUrl; ?>
 
 	<!-- meta -->
 	<meta name="description" content="">
@@ -61,38 +62,38 @@
 	<div id="hd" class="centered">
 		<div id="top-bar group">
 			<ul class="isa13-social group">
-				<li>
+<!-- 				<li>
 					<a href="#" class="icon-alone fs-16">
 						<span aria-hidden="true" data-icon="&#x73;"></span>
 						<span class="screen-reader-text">Share</span>
 					</a>
-				</li>
+				</li> -->
 				<li>
-					<a href="#" class="icon-alone">
+					<a href="https://www.facebook.com/InteractionSouthAmerica" class="icon-alone">
 						<span aria-hidden="true" data-icon="&#x66;"></span>
 						<span class="screen-reader-text">Facebook</span>
 					</a>
 				</li>
 				<li>		
-					<a href="#" class="icon-alone">
+					<a href="https://twitter.com/ISAmerica13" class="icon-alone">
 						<span aria-hidden="true" data-icon="&#x74;"></span>
 						<span class="screen-reader-text">Twitter</span>
 					</a>	
 				</li>				
-				<li>
+<!-- 				<li>
 					<a href="#" class="icon-alone">
 						<span aria-hidden="true" data-icon="&#x6c;"></span>
 						<span class="screen-reader-text">LinkedIn</span>
 					</a>
-				</li>
+				</li> -->
 				<li>
-					<a href="#" class="icon-alone">
+					<a href="https://plus.google.com/u/0/b/100064025635605412866/100064025635605412866" class="icon-alone">
 						<span aria-hidden="true" data-icon="&#x67;"></span>
 						<span class="screen-reader-text">Google Plus</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="icon-alone fs-16">
+					<a href="<?php echo $homeUrl; ?>/secao/blog/rss" class="icon-alone fs-16">
 						<span aria-hidden="true" data-icon="&#x72;"></span>
 						<span class="screen-reader-text">Rss</span>
 					</a>
@@ -118,7 +119,7 @@
 			</ul>
 		</div>
 		<div class="clr group">
-			<?php global $homeUrl; ?>
+			
 			<div class="vcard">
 				<span class="fn">
 					<a href="<?php echo $homeUrl; ?>" class="url" rel="me" title="Interaction South America 13 (Página Inicial)">
@@ -153,16 +154,17 @@
 				</div>
 			</nav>
 			<nav id="main-nav" class="clr group">
+				<?php global $homeUrl; ?>
 				<ul class="group">
-					<li class="current"><a href="index.html" title="Ir para: página inicial" tabindex="2">Home</a></li>
-					<li><a href="#" title="Ir para: página inicial" tabindex="2">A Conferência</a></li>
-					<li><a href="#" title="Ir para: página inicial" tabindex="2">Programação</a></li>
-					<li><a href="palestras.html" title="Ir para: página inicial" tabindex="2">Palestras</a></li>
-					<li><a href="#" title="Ir para: página inicial" tabindex="2">Workshops</a></li>
-					<li><a href="#" title="Ir para: página inicial" tabindex="2">Artigos</a></li>
-					<li><a href="#" title="Ir para: página inicial" tabindex="2">Cases</a></li> 
-					<li><a href="#" title="Ir para: página inicial" tabindex="2">Planeje sua viagem</a></li> 
-					<li class="right"><a href="#">Blog</a></li> 
+					<li <?php if(is_home()){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>" title="Ir para: página inicial" tabindex="2">Home</a></li>
+					<li <?php if(is_page('conferencia')){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>/conferencia" title="Ir para: página inicial" tabindex="2">A Conferência</a></li>
+					<li <?php if(is_page('programacao')){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>/programacao" title="Ir para: página inicial" tabindex="2">Programação</a></li>
+					<li <?php if(is_post_type_archive('palestras')){ ?>class="current" <?php } ?>><a href="<?php echo $homeUrl; ?>/palestras" title="Ir para: página inicial" tabindex="2">Palestras</a></li>
+					<li <?php if(is_page('workshops')){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>/workshops" title="Ir para: página inicial" tabindex="2">Workshops</a></li>
+					<li <?php if(is_page('artigos-inscricao')){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>/artigos-inscricao" title="Ir para: página inicial" tabindex="2">Artigos</a></li>
+					<li <?php if(is_page('cases')){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>/cases" title="Ir para: página inicial" tabindex="2">Cases</a></li> 
+					<li <?php if(is_page('planeje-sua-viagem')){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>/planeje-sua-viagem" title="Ir para: página inicial" tabindex="2">Planeje sua viagem</a></li> 
+					<li class="right"><a href="<?php echo $homeUrl; ?>/secao/blog">Blog</a></li> 
 				</ul>
 			</nav>
 		</div>

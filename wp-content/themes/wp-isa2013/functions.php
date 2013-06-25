@@ -4,6 +4,14 @@ require_once "class/GeneralSettings.class.php";
 
 $baseUrl = get_bloginfo("template_url");
 $homeUrl = get_bloginfo("url");
+$share_icons_code =  array(
+          'Share' => '&#x73;',
+          'Facebook' => '&#x66;',
+          'Twitter' => '&#x74;',
+          'LinkedIn' => '&#x6c;',
+          'Google Plus' => '&#x67;',
+          'RSS' => '&#x72;'
+        );
 
 add_theme_support('post-thumbnails');
 
@@ -30,6 +38,10 @@ function rv_get_youtube_id( $video_url ){
   return $query['v'];
 }
 
+function rv_get_vimeo_id( $video_url ){
+  sscanf(parse_url($video_url, PHP_URL_PATH), '/%d', $video_id);
+  return $video_id;
+} 
 
 //change logo admin
 function rv_custom_login_logo() {
@@ -47,8 +59,8 @@ add_action('admin_head', 'custom_css');
 
 // Settings
 
-$field = new GeneralSettings( "Facebook likebox", "fb-likebox", "text" );
-$field = new GeneralSettings( "Twitter usuário", "twitter-widget-name", "text" );
+// $field = new GeneralSettings( "Facebook likebox", "fb-likebox", "text" );
+// $field = new GeneralSettings( "Twitter usuário", "twitter-widget-name", "text" );
 
 add_filter('body_class', 'rv_body_class');
 function rv_body_class($classes) {

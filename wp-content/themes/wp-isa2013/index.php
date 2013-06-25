@@ -3,104 +3,30 @@
 	<section class="speakers-section group">
 		<h1 class="title fw-light c-green">14 <?php _e('[:pt]palestrantes confirmados[:en]confirmed speakers[:es]ponentes confirmados'); ?></h1>
 		<ul class="speakers-list">
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Bill Buxton</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/bill-buxton-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Marc Stickdorn</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Arne van Oosterom</strong>
-					<span class="country fs-12">Holanda</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/bill-buxton-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Jeff Gothelf</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li  class="no-mr">
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Jared Spool</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/bill-buxton-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Catarina Motta</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-						<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Bill Buxton</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/bill-buxton-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Marc Stickdorn</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Arne van Oosterom</strong>
-					<span class="country fs-12">Holanda</span>
-				</a>
-			</li>
-			<li class="no-mr">
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/bill-buxton-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Jeff Gothelf</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Jared Spool</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/bill-buxton-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Catarina Motta</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/marc-stickdorn-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Bill Buxton</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="speaker-box">
-					<img src="<?php echo $baseUrl; ?>/img/speakers/bill-buxton-180x200.jpg" height="200" width="180" alt="">
-					<strong class="name fs-16">Marc Stickdorn</strong>
-					<span class="country fs-12">Estados Unidos</span>
-				</a>
-			</li>
+			<?php 
+				$rv_query = new WP_Query();
+				$args = array( "post_type" => "palestras");
+				$rv_query->query($args);
+				
+				$c = 0;
+				if( $rv_query->have_posts() ){
+					while( $rv_query->have_posts() ){	
+						$rv_query->the_post(); 
+						$c++;
+			?>
+						<li <?php if($c%5==0) { echo 'class="no-mr"'; } ?>>
+							<a href="<?php the_permalink(); ?>" class="speaker-box">
+								<?php if( has_post_thumbnail() ){ ?>
+									<?php the_post_thumbnail( "speaker-thumb" ); ?>
+								<?php } ?>
+								<strong class="name fs-16"><?php the_title(); ?></strong>
+								<?php if( $location = get_field('location')) { ?>
+									<span class="country fs-12"><?php echo $location; ?></span>
+								<?php } ?>
+							</a>
+						</li>
+				<?php } ?>
+			<?php }	?>	
 		</ul>	
 	</section>
 	<section class="highlights-section group">
