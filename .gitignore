@@ -1,1 +1,3 @@
 *.sass-cache
+wp-content/plugins/wpml-media/
+wp-content/plugins/sitepress-multilingual-cms/
