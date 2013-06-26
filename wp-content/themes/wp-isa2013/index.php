@@ -31,19 +31,43 @@
 	</section>
 	<section class="highlights-section group">
 		<div class="highlight-section green-box">
-			<h1 class="fs-30 title">Workshops</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elited vitae ante encras elementum congue lectsuscipit donec eros ligula, mattis quis consec facilisis sed torted id massa elit nullam.</p>
-			<a href="#" class="highlight-section-btn fs-15">&raquo; Inscreva-se</a>
+			<?php 
+				$rv_query = new WP_Query();
+				$args = array( 'page_id' => 35, 'suppress_filters' => FALSE );
+				$rv_query->query($args);
+				if( $rv_query->have_posts() ){
+					$rv_query->the_post();
+			?>
+				<h1 class="fs-30 title"><?php the_title(); ?></h1>
+				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
+				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Inscreva-se</a>
+			<?php }	?>	
 		</div>
 		<div class="highlight-section light-red-box">
-			<h1 class="fs-30 title">Artigos cientificos</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elited vitae ante encras elementum congue lectsuscipit donec eros ligula, mattis quis consec facilisis sed torted id massa elit nullam.</p>
-			<a href="#" class="highlight-section-btn fs-15">&raquo; Submeta seu artigo</a>
+			<?php 
+				$rv_query = new WP_Query();
+				$args = array( 'page_id' => 13, 'suppress_filters' => FALSE );
+				$rv_query->query($args);
+				if( $rv_query->have_posts() ){
+					$rv_query->the_post();
+			?>
+				<h1 class="fs-30 title">Artigos cientificos</h1>
+				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
+				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Submeta seu artigo</a>
+			<?php }	?>
 		</div>
 		<div class="highlight-section melon-green-box">
+			<?php 
+				$rv_query = new WP_Query();
+				$args = array( 'page_id' => 39, 'suppress_filters' => FALSE );
+				$rv_query->query($args);
+				if( $rv_query->have_posts() ){
+					$rv_query->the_post();
+			?>
 			<h1 class="fs-30 title">Cases de mercado</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elited vitae ante encras elementum congue lectsuscipit donec eros ligula, mattis quis consec facilisis sed torted id massa elit nullam.</p>
-			<a href="#" class="highlight-section-btn fs-15">&raquo; Submeta seu case</a>
+			<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
+			<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Submeta seu case</a>
+			<?php }	?>	
 		</div>
 	</section>
 	<section class="headlines-section mb-30 group">
@@ -58,19 +82,26 @@
 				<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>
 			</div>
 		</div>
-		<div class="headline-section headline-blog">
-			<article class="blog-headline">
-				<div class="label c-gray fs-12">Blog ISA13</div>
-				<h1 class="title"><a href="#" class="c-orange">Quando a o Design de Interação pode ser o caminho para aumentar o ROI do seu negócio?</a></h1>
-				<p class="author c-gray fs-12">Por Emiliano Abad</p>
-			</article>			
-		</div>
-		<div class="headline-section headline-blog">
-			<article class="blog-headline">
-				<div class="label c-gray fs-12">Blog ISA13</div>
-				<h1 class="title"><a href="#" class="c-orange">Design Thinking aprendendo na prática.</a></h1>
-				<p class="author c-gray fs-12">Por Emiliano Abad</p>
-			</article>			
-		</div>
+		<?php 
+				$rv_query = new WP_Query();
+				$args = array( 
+							'category_name' => 'blog', 
+							'category__not_in' => 3, // citacao
+							'posts_per_page' => 2,
+							'suppress_filters' => FALSE 
+						);
+				$rv_query->query($args);
+				if( $rv_query->have_posts() ){
+					while( $rv_query->have_posts() ){ $rv_query->the_post();
+			?>
+			<div class="headline-section headline-blog">
+				<article class="blog-headline">
+					<div class="label c-gray fs-12">Blog ISA13</div>
+					<h1 class="title"><a href="<?php the_permalink(); ?>" class="c-orange"><?php the_title(); ?></a></h1>
+					<p class="author c-gray fs-12">Por <?php echo get_field("autor_nome") ?></p>
+				</article>			
+			</div>
+				<?php }	?>
+			<?php }	?>	
 	</section>
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
 <div id="sidebar">
 	<?php 
 		$rv_query = new WP_Query();
-		$args = array( "pagename" => "atracoes");
+		$args = array( 'page_id' => 24, 'suppress_filters' => FALSE);
 		$rv_query->query($args);
 		
 		if( $rv_query->have_posts() ){

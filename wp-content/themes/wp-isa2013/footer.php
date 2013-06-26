@@ -1,13 +1,15 @@
 </div><!-- /#main-content -->
 <footer id="ft-wrapper">
 	<?php global $baseUrl; ?>
-	<div class="centered">
+	<div class="centered clr">
+		<?php if(!is_home()) { ?>
 		<section class="fb-widget clr">
 			<h1 class="title fw-light c-green">Faça parte da conferência</h1>
 			<div class="hrz-facebook-widget">
 				<div class="fb-like-box" data-href="https://www.facebook.com/InteractionSouthAmerica" data-width="980" data-height="170" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
 			</div>
 		</section>
+		<?php } ?>
 		<section class="diamond-sponsor itau-big-banner">
 			<h2 class="title c-gray fw-light">Patrocinador Diamante</h2>
 			<img src="<?php echo $baseUrl; ?>/img/sponsors/itau-big-banner.jpg" height="275" width="950" alt="">

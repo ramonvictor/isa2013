@@ -22,9 +22,10 @@
 			</div>
 		</figure>
 		<div class="headline-section twitter-widget">
+			<?php global $baseUrl; ?>
 			<div class="twitter-widget-hd group">
 				<figure class="thumb">
-					<a href="#"><img src="img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
+					<a href="#"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
 				</figure>
 				<a href="#" class="twitter-name fw-bold fs-16">@arnevanoosterom</a>
 			</div>
@@ -51,9 +52,13 @@
 					<div class="profile-event <?php if($c%2==0) { echo 'right'; } else { echo 'left'; } ?>">
 						<strong class="label"><?php echo $contribution['isa_contribution_label']; ?></strong>
 						<h3 class="profile-event-title">
-							<a href="<?php echo $contribution['isa_contribution_url']; ?>">
+							<?php if($contribution['isa_contribution_url'] && $contribution['isa_contribution_url'] != "#") { ?>
+								<a href="<?php echo $contribution['isa_contribution_url']; ?>">
+							<?php } ?>
 								<?php echo $contribution['isa_contribution_title']; ?>
-							</a>
+							<?php if($contribution['isa_contribution_url'] && $contribution['isa_contribution_url'] != "#") { ?>
+								</a>
+							<?php } ?>	
 						</h3>
 						<p class="fs-11 ff-roboto"><?php echo $contribution['isa_contribution_detail']; ?></p>
 					</div>

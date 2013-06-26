@@ -1,5 +1,6 @@
 <?php
 require_once "class/PostType.class.php";
+require_once "class/Geral.class.php";
 require_once "class/GeneralSettings.class.php";
 
 $baseUrl = get_bloginfo("template_url");
