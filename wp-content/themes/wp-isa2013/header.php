@@ -99,22 +99,15 @@
 					</a>
 				</li>
 			</ul>
-			<?php 
-				$current_lang = qtrans_getLanguage(); 
-				global $qtranslate_slug;
-				$url_pt = $qtranslate_slug->get_current_url('pt');
-				$url_en = $qtranslate_slug->get_current_url('en');
-				$url_es = $qtranslate_slug->get_current_url('es');
-			?>
 			<ul class="languages-nav group">
-				<li class="<?php echo $current_lang == 'pt' ? 'current' : ''; ?>">
-					<a href="<?php echo $url_pt; ?>">Português</a>
+				<li class="current">
+					<a href="#">Português</a>
 				</li>
-				<li class="<?php echo $current_lang == 'en' ? 'current' : ''; ?>">
-					<a href="<?php echo $url_en; ?>">English</a>
+				<li>
+					<a href="#">English</a>
 				</li>
-				<li class="<?php echo $current_lang == 'es' ? 'current' : ''; ?>">
-					<a href="<?php echo $url_es; ?>">Español</a>
+				<li>
+					<a href="#">Español</a>
 				</li>
 			</ul>
 		</div>
@@ -129,7 +122,7 @@
 				</span>
 			</div><!-- vcard -->
 			<nav class="register-wrapper right">
-				<a href="#" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">&raquo; <?php _e('[:pt]Faça sua inscrição[:en]Buy your ticket[:es]Hacer inscripción'); ?></a>
+				<a href="#" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">&raquo; Faça sua inscrição</a>
 				<div class="register-subnav dropdown-menu hide" role="menu">
 					<p class="register-subnav-title"><strong class="c-brown">Early Bird</strong> - até dia 21/05/13</p>
 					<ul>

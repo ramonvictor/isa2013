@@ -22,6 +22,8 @@ add_image_size('speaker-medium', 310, 410, true );
 add_image_size('keynote-thumb', 120, 90, true );
 add_image_size('book-thumb', 120, 160, true );
 
+
+
 // Current url
 
 function rv_get_current_url(){

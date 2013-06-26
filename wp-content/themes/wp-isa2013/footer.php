@@ -3,7 +3,7 @@
 	<?php global $baseUrl; ?>
 	<div class="centered">
 		<section class="fb-widget clr">
-			<h1 class="title fw-light c-green"><?php _e('[:pt]Faça parte da conferência[:en]Join the conference[:es]Faça parte da conferência'); ?></h1>
+			<h1 class="title fw-light c-green">Faça parte da conferência</h1>
 			<div class="hrz-facebook-widget">
 				<div class="fb-like-box" data-href="https://www.facebook.com/InteractionSouthAmerica" data-width="980" data-height="170" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
 			</div>
