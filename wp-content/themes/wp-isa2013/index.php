@@ -74,9 +74,9 @@
 		<div class="headline-section twitter-widget">
 			<div class="twitter-widget-hd group">
 				<figure class="thumb">
-					<a href="#"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
+					<a href="https://twitter.com/ISAmerica13"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
 				</figure>
-				<a href="#" class="twitter-name fw-bold fs-16">@isaamerica13</a>
+				<a href="https://twitter.com/ISAmerica13" class="twitter-name fw-bold fs-16">@isaamerica13</a>
 			</div>
 			<div class="twitter-widget-body">
 				<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>

@@ -19,33 +19,33 @@
 		<section class="sponsors">
 			<div class="left box sponsors-silver">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Prata</h3>
-				<img src="<?php echo $baseUrl; ?>/img/sponsors/silver/rosenfeld-brand.jpg" height="82" width="310" alt="">
+				<a href="http://rosenfeldmedia.com/"><img src="<?php echo $baseUrl; ?>/img/sponsors/silver/rosenfeld-brand.jpg" height="82" width="310" alt=""></a>
 			</div>
 			<div class="right box sponsors-bronze">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Bronze</h3>
 				<ul class="sponsors-bronze-list group">
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/voel-brand.png" height="82" width="94" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/dt-brand.png" height="82" width="60" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/gouge-brand.png" height="82" width="105" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/wezen-brand.png" height="82" width="94" alt=""></a></li>
-					<li class="last"><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/tritone-brand.png" height="82" width="93" alt=""></a></li>
+					<li><a href="http://voel.in/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/voel-brand.png" height="82" width="94" alt=""></a></li>
+					<li><a href="http://www.designthinkers.nl/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/dt-brand.png" height="82" width="60" alt=""></a></li>
+					<li><a href="http://gauge.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/gouge-brand.png" height="82" width="105" alt=""></a></li>
+					<li><a href="http://www.wezen.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/wezen-brand.png" height="82" width="94" alt=""></a></li>
+					<li class="last"><a href="http://www.tritone.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/tritone-brand.png" height="82" width="93" alt=""></a></li>
 				</ul>
 			</div>
 			<div class="clr mb-30">
 				<h4 class="underlined-title c-gray fs-14">Apoiadores</h4>
 				<ul class="supporters-list group">
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-brand.png" height="56" width="63" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-edu-brand.png" height="56" width="63" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/2abad-brand.png" height="56" width="67" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/welab-brand.png" height="56" width="52" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/smaply-brand.png" height="56" width="56" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/robolivre-brand.png" height="56" width="95" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/gonow-brand.png" height="56" width="74" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/try-brand.png" height="56" width="51" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/pagseguro-brand.png" height="56" width="97" alt=""></a></li>
+					<li><a href="http://www.cesar.org.br/site/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-brand.png" height="56" width="63" alt=""></a></li>
+					<li><a href="http://www.cesar.edu.br/newsite/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-edu-brand.png" height="56" width="63" alt=""></a></li>
+					<li><a href="http://www.facebook.com/2abad"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/2abad-brand.png" height="56" width="67" alt=""></a></li>
+					<li><a href="http://www.welabdesign.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/welab-brand.png" height="56" width="52" alt=""></a></li>
+					<li><a href="http://www.smap.ly/"><impagg src="<?php echo $baseUrl; ?>/img/sponsors/supporters/smaply-brand.png" height="56" width="56" alt=""></a></li>
+					<li><a href="http://robolivre.org/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/robolivre-brand.png" height="56" width="95" alt=""></a></li>
+					<li><a href="http://www.gonow.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/gonow-brand.png" height="56" width="74" alt=""></a></li>
+					<li><a href="http://www.try.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/try-brand.png" height="56" width="51" alt=""></a></li>
+					<li><a href="https://pagseguro.uol.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/pagseguro-brand.png" height="56" width="97" alt=""></a></li>
 				</ul>
 			</div>
-			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="#">#ISA13?</a> Baixe nosso Media Kit ou envie um e-mail para <a href="#">patrocinio@ixdarecife.org</a></p>
+			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="https://twitter.com/search?q=%23ISA13">#ISA13</a>? Baixe nosso <a href="http://isa.ixda.org/2013/propostapatrocinioisa2013marco.pdf">Media Kit</a> ou envie um e-mail para <a href="mailto: &#112;&#097;&#116;&#114;&#111;&#099;&#105;&#110;&#105;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">patrocinio@ixdarecife.org</a></p>
 		</section>
 	</div>
 	<div id="ft-bar">
@@ -53,7 +53,7 @@
 			<ul class="credits group">
 				<li>
 					<span class="credits-label ff-roboto">Realização</span>
-					<a href="#">
+					<a href="http://www.ixdarecife.org/">
 					<img src="<?php echo $baseUrl; ?>/img/ixda-recife-brand.png" height="35" width="84" alt="">
 					</a>
 				</li>
@@ -65,7 +65,7 @@
 				</li>
 			</ul>
 			<p class="ff-roboto fs-12 c-gray">Interaction South America 2013 - Copyleft © 2013 todo conteúdo pode ser reproduzido desde que mencionado a fonte.<br>
-			<span class="c-gray-light">Fale com a organização</span>: <a href="#">contato@ixdarecife.org</a> | +55 31 9919.4565</p>
+			<span class="c-gray-light">Fale com a organização</span>: <a href="mailto: &#099;&#111;&#110;&#116;&#097;&#116;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">contato@ixdarecife.org</a> | +55 31 9919.4565</p>
 		</div>
 	</div>
 </footer>

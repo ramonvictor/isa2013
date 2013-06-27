@@ -9,44 +9,54 @@
 		<div class="group">
 			<h3 class="sidebar-title">Pelo Twitter</h3>
 			<div class="twiiter-list-group">
-				<?php 
-					$name = 'ramonvictor';
-					// $url = "http://api.twitter.com/1/statuses/user_timeline/".$name.".json?count=5";
-					// make request
-					$ch = curl_init();
-					curl_setopt($ch, CURLOPT_URL, "http://api.twitter.com/1/statuses/user_timeline/".$name.".json?count=5"); 
-					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-					$output = curl_exec($ch);   
-
-					// convert response
-					$output = json_decode($output);
-
-					// handle error; error output
-					if(curl_getinfo($ch, CURLINFO_HTTP_CODE) !== 200) {
-					  var_dump($output);
-					}
-					var_dump($output);
-
-					curl_close($ch);
-				?>
-				<?php if( count($tweets) ){ ?>
+				<?php global $baseUrl; ?>
 				<ul>
-					<?php foreach($tweets as $tweet) { ?>
 					<li>
 						<div class="twitter-widget-hd group">
 							<figure class="thumb">
 								<a href="#"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
 							</figure>
-							<a href="#" class="twitter-name fw-bold fs-16">@<?php echo $name; ?></a>
+							<a href="#" class="twitter-name fw-bold fs-16">@isaamerica13</a>
 						</div>
 						<div class="twitter-widget-body">
-							<p><?php echo $tweet->text; ?></p>
+							<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>
 						</div>
 					</li>
-					<?php } ?>
+					<li>
+						<div class="twitter-widget-hd group">
+							<figure class="thumb">
+								<a href="#"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
+							</figure>
+							<a href="#" class="twitter-name fw-bold fs-16">@isaamerica13</a>
+						</div>
+						<div class="twitter-widget-body">
+							<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>
+						</div>
+					</li>
+					<li>
+						<div class="twitter-widget-hd group">
+							<figure class="thumb">
+								<a href="#"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
+							</figure>
+							<a href="#" class="twitter-name fw-bold fs-16">@isaamerica13</a>
+						</div>
+						<div class="twitter-widget-body">
+							<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>
+						</div>
+					</li>
+					<li>
+						<div class="twitter-widget-hd group">
+							<figure class="thumb">
+								<a href="#"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
+							</figure>
+							<a href="#" class="twitter-name fw-bold fs-16">@isaamerica13</a>
+						</div>
+						<div class="twitter-widget-body">
+							<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>
+						</div>
+					</li>
 				</ul>
-				<?php } ?>
 			</div>
-			<a href="#" class="orange-btn fs-15 fw-bold">+ seguir</a>
+			<a href="https://twitter.com/ISAmerica13" class="orange-btn fs-15 fw-bold">+ seguir</a>
 		</div>
 	</div>
