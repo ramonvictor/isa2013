@@ -71,17 +71,24 @@
 		</div>
 	</section>
 	<section class="headlines-section mb-30 group">
+		<?php $tweets = rv_get_tweets("ISAmerica13", 1); ?>
+		<?php if ($tweets) { ?>
 		<div class="headline-section twitter-widget">
+			<?php foreach ($tweets as $tweet) { ?>
 			<div class="twitter-widget-hd group">
 				<figure class="thumb">
-					<a href="https://twitter.com/ISAmerica13"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
+					<a href="https://twitter.com/<?php echo $tweet->user->screen_name; ?>">
+						<img src="<?php echo $tweet->user->profile_image_url; ?>" height="35" width="35" alt="">
+					</a>
 				</figure>
-				<a href="https://twitter.com/ISAmerica13" class="twitter-name fw-bold fs-16">@isaamerica13</a>
+				<a href="https://twitter.com/<?php echo $tweet->user->screen_name; ?>" class="twitter-name fw-bold fs-16">@<?php echo $tweet->user->screen_name; ?></a>
 			</div>
 			<div class="twitter-widget-body">
-				<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>
+				<p><?php echo $tweet->text; ?></p>
 			</div>
+			<?php } ?>
 		</div>
+		<?php } ?>
 		<?php 
 				$rv_query = new WP_Query();
 				$args = array( 

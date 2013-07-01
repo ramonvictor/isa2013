@@ -1,3 +1,4 @@
 *.sass-cache
 wp-content/plugins/wpml-media/
 wp-content/plugins/sitepress-multilingual-cms/
+wp-content/themes/wp-isa2013/class/twitteroauth/privatekeys.php

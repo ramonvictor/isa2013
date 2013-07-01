@@ -23,7 +23,20 @@ add_image_size('speaker-medium', 310, 410, true );
 add_image_size('keynote-thumb', 120, 90, true );
 add_image_size('book-thumb', 120, 160, true );
 
+function rv_get_tweets( $t_username, $t_length ){
+    
 
+    $twitteruser = $t_username;
+    $notweets = $t_length;
+
+    require_once 'class/twitteroauth/twitteroauth.php';
+    require_once 'class/twitteroauth/privatekeys.php';
+    
+    $c = new TwitterOAuth($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
+    $tweets = $c->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser."&count=".$notweets);
+    $tweets = json_encode($tweets, true);
+    return json_decode($tweets);
+}
 
 // Current url
 

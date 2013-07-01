@@ -16,23 +16,41 @@
 									<span class="screen-reader-text"><?php echo $network['social_networks_name']; ?></span>
 								</a>
 							</li>
+							<?php
+								if( $network['social_networks_name'] == 'Twitter' ){
+									$twitter_url = $network['social_networks_url'];
+								}
+							?>
 						<?php } ?>
 					<?php }	?>
 				</ul>
 			</div>
 		</figure>
-		<div class="headline-section twitter-widget">
-			<?php global $baseUrl; ?>
-			<div class="twitter-widget-hd group">
-				<figure class="thumb">
-					<a href="#"><img src="<?php echo $baseUrl; ?>/img/twitter-thumb.jpg" height="35" width="35" alt=""></a>
-				</figure>
-				<a href="#" class="twitter-name fw-bold fs-16">@arnevanoosterom</a>
+		<?php if ($twitter_url){ ?>
+			<?php 
+				if( preg_match("|https?://(www\.)?twitter\.com/(#!/)?@?([^/]*)|", $twitter_url, $matches) ) {
+					$user_name = $matches[3];
+					$tweets = rv_get_tweets($user_name, 1); 
+				}
+			?>
+			<?php if ($tweets) { ?>
+			<div class="headline-section twitter-widget">
+				<?php foreach ($tweets as $tweet) { ?>
+					<div class="twitter-widget-hd group">
+						<figure class="thumb">
+							<a href="https://twitter.com/<?php echo $tweet->user->screen_name; ?>">
+								<img src="<?php echo $tweet->user->profile_image_url; ?>" height="35" width="35" alt="">
+							</a>
+						</figure>
+						<a href="https://twitter.com/<?php echo $tweet->user->screen_name; ?>" class="twitter-name fw-bold fs-16">@<?php echo $tweet->user->screen_name; ?></a>
+					</div>
+					<div class="twitter-widget-body">
+						<p><?php echo $tweet->text; ?></p>
+					</div>
+				<?php } ?>
 			</div>
-			<div class="twitter-widget-body">
-				<p>Aberta a chamada para Artigos Acadêmicos no @ISAmerica13 <a href="#">isa.ixda.org/2013/artigos</a> submissão dos artigos até 15 de junho!</p>
-			</div>
-		</div>
+			<?php } ?>
+		<?php } ?>
 	</div>
 	<div class="profile-detail-column">
 		<header class="profile-detail-hd">
