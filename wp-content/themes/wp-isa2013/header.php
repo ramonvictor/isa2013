@@ -32,8 +32,20 @@
 	<?php global $homeUrl; ?>
 
 	<!-- meta -->
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="keywords" content="interaction south america 13, interaction south america 2013, ixda, recife, brasil, conferencia, design de interação">
+	<meta name="description" content="Interaction South America 13, 5° Conferência Latino Americana de Design de Interação, sediada no Recife">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="<?php echo $baseUrl; ?>/img/favicon.ico" type="image/x-icon">
+
+	<!-- facebook meta -->
+	<meta property="og:title" content="Interaction South America 13 - Recife / Brasil"/>
+	<meta property="og:url" content="<?php echo $homeUrl; ?>"/>
+	<meta property="og:image" content="<?php echo $baseUrl; ?>/img/isa13-facebook.png"/>
+	<meta property="og:description" content="Novas indústrias, novos modelos, novas interações. O Interaction South America é uma conferência anual que reúne profissionais e acadêmicos de Design e áreas relacionadas para participarem de Conversas, Palestras, Workshops e outras atividades para discutir sobre o papel do Design de Interação e o perfil do profissional no mercado e sua atuação na construção de uma nova economia."/>
+
+
+	<!-- viewport -->
 	<meta name="viewport" content="width=device-width">
 
 	<!-- author -->
@@ -55,6 +67,17 @@
 	<!-- modernizr -->
 	<script src="<?php echo $baseUrl; ?>/js/rv-modernizr.js"></script>
 	<?php wp_head(); ?>
+	<script type="text/javascript">
+	  // var _gaq = _gaq || [];
+	  // _gaq.push(['_setAccount', 'UA-39176453-1']);
+	  // _gaq.push(['_trackPageview']);
+
+	  // (function() {
+	  //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  // })();
+	</script>
 </head>
 <body <?php body_class(); ?> >
 <p class="hide"><a href="#main-content" tabindex="1">Pular a navegação e ir direto para o conteúdo</a></p>
