@@ -16,37 +16,62 @@
 			<a href="http://www.facebook.com/itau" class="facebook-link skip">Itaú no Facebook</a>
 			<a href="http://www.twitter.com/itau" class="twitter-link skip">Itaú no Twitter</a>
 		</section>
+		<?php 
+			$rv_query = new WP_Query();
+			$args = array( 'page_id' => 168);
+			$rv_query->query($args);
+			if( $rv_query->have_posts() ){	$rv_query->the_post();
+		?>	
 		<section class="sponsors">
+			<?php if( $sp_silvers = get_field('sponsors_silver')) { ?>
 			<div class="left box sponsors-silver">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Prata</h3>
-				<a href="http://rosenfeldmedia.com/"><img src="<?php echo $baseUrl; ?>/img/sponsors/silver/rosenfeld-brand.jpg" height="82" width="310" alt=""></a>
+				<?php foreach( $sp_silvers as $sp_silver ){ ?>
+				<a href="<?php echo $sp_silver['sponsors_silver_url']; ?>" title="<?php echo $sp_silver['sponsors_silver_name']; ?>">
+					<?php if( $sp_silver_img = $sp_silver['sponsors_silver_image']['sizes']['large']) { ?>
+							<img src="<?php echo $sp_silver_img; ?>" alt="<?php echo $sp_silver['sponsors_silver_name']; ?>">
+					<?php } ?>
+				</a>
+				<?php } ?>
 			</div>
+			<?php } ?>
+			<?php if( $sp_bronzes = get_field('sponsors_bronze')) { ?>
 			<div class="right box sponsors-bronze">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Bronze</h3>
 				<ul class="sponsors-bronze-list group">
-					<li><a href="http://voel.in/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/voel-brand.png" height="82" width="94" alt=""></a></li>
-					<li><a href="http://www.designthinkers.nl/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/dt-brand.png" height="82" width="60" alt=""></a></li>
-					<li><a href="http://gauge.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/gouge-brand.png" height="82" width="105" alt=""></a></li>
-					<li><a href="http://www.wezen.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/wezen-brand.png" height="82" width="94" alt=""></a></li>
-					<li class="last"><a href="http://www.tritone.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/bronze/tritone-brand.png" height="82" width="93" alt=""></a></li>
+					<?php $c = 0; ?>
+					<?php foreach( $sp_bronzes as $sp_bronze ){ ?>
+						<?php $c++; ?>
+						<li <?php if ($c == count($sp_bronzes)) { ?>class="last"<?php } ?>>
+							<a href="<?php echo $sp_bronze['sponsors_bronze_url']; ?>" title="<?php echo $sp_bronze['sponsors_bronze_name']; ?>">
+								<?php if( $sp_bronze_img = $sp_bronze['sponsors_bronze_image']['sizes']['large']) { ?>
+									<img src="<?php echo $sp_bronze_img; ?>" alt="<?php echo $sp_bronze['sponsors_bronze_name']; ?>">
+								<?php } ?>
+							</a>
+						</li>
+					<?php } ?>
 				</ul>
 			</div>
+			<?php } ?>
+			<?php if( $sp_supporters = get_field('supporters')) { ?>
 			<div class="clr mb-30">
 				<h4 class="underlined-title c-gray fs-14">Apoiadores</h4>
 				<ul class="supporters-list group">
-					<li><a href="http://www.cesar.org.br/site/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-brand.png" height="56" width="63" alt=""></a></li>
-					<li><a href="http://www.cesar.edu.br/newsite/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/cesar-edu-brand.png" height="56" width="63" alt=""></a></li>
-					<li><a href="http://www.facebook.com/2abad"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/2abad-brand.png" height="56" width="67" alt=""></a></li>
-					<li><a href="http://www.welabdesign.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/welab-brand.png" height="56" width="52" alt=""></a></li>
-					<li><a href="http://www.smap.ly/"><impagg src="<?php echo $baseUrl; ?>/img/sponsors/supporters/smaply-brand.png" height="56" width="56" alt=""></a></li>
-					<li><a href="http://robolivre.org/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/robolivre-brand.png" height="56" width="95" alt=""></a></li>
-					<li><a href="http://www.gonow.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/gonow-brand.png" height="56" width="74" alt=""></a></li>
-					<li><a href="http://www.try.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/try-brand.png" height="56" width="51" alt=""></a></li>
-					<li><a href="https://pagseguro.uol.com.br/"><img src="<?php echo $baseUrl; ?>/img/sponsors/supporters/pagseguro-brand.png" height="56" width="97" alt=""></a></li>
+					<?php foreach( $sp_supporters as $sp_supporter ){ ?>
+					<li>
+						<a href="<?php echo $sp_supporter['supporters_url']; ?>" title="<?php echo $sp_supporter['supporters_name']; ?>">
+							<?php if( $sp_supporter_img = $sp_supporter['supporters_image']['sizes']['large']) { ?>
+								<img src="<?php echo $sp_supporter_img; ?>" alt="<?php echo $sp_supporter['supporters_name']; ?>">
+							<?php } ?>
+						</a>
+					</li>
+					<?php } ?>
 				</ul>
 			</div>
+			<?php } ?>
 			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="https://twitter.com/search?q=%23ISA13">#ISA13</a>? Baixe nosso <a href="http://isa.ixda.org/2013/propostapatrocinioisa2013marco.pdf">Media Kit</a> ou envie um e-mail para <a href="mailto: &#112;&#097;&#116;&#114;&#111;&#099;&#105;&#110;&#105;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">patrocinio@ixdarecife.org</a></p>
 		</section>
+		<?php }	?>	
 	</div>
 	<div id="ft-bar">
 		<div class="centered group">
