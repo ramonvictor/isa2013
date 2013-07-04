@@ -144,29 +144,37 @@
 				</span>
 			</div><!-- vcard -->
 			<nav class="register-wrapper right">
-				<a href="#" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">&raquo; Faça sua inscrição</a>
+				<?php 
+					$rv_query = new WP_Query();
+					$args = array( 'page_id' => 189, 'suppress_filters' => FALSE );
+					$rv_query->query($args);
+					if( $rv_query->have_posts() ){
+						$rv_query->the_post();
+				?>
+				<a href="#" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">
+					&raquo; <?php the_title(); ?>
+				</a>
 				<div class="register-subnav dropdown-menu hide" role="menu">
-					<p class="register-subnav-title"><strong class="c-brown">Early Bird</strong> - até dia 21/05/13</p>
+					<?php if( $tickets_hd = get_field('ticket_header') ){ ?>
+					<p class="register-subnav-title">
+						<strong class="c-brown"><?php echo $tickets_hd; ?></strong>
+					</p>
+					<?php } ?>
+					<?php if( $tickets = get_field('ticket_options') ){ ?>
 					<ul>
-						<li class="group"><a href="#"><span class="brown-pencil-icon icon"></span>
-							<span class="text left">Profissional</span>
-							<span class="fw-bold text right">R$ 400,00</span>
-
-						</a></li>
-						<li class="group"><a href="#"><span class="brown-glasses-icon icon"></span>
-							<span class="text left">Professor</span>
-							<span class="fw-bold text right">R$ 300,00</span>
-						</a></li>
-						<li class="group"><a href="#"><span class="brown-university-icon icon"></span>
-							<span class="text left">Estudante</span>
-							<span class="fw-bold text right">R$ 200,00</span>
-						</a></li>
-						<li class="group"><a href="#"><span class="brown-workshop-icon icon"></span>
-							<span class="text left">Workshop</span>
-							<span class="fw-bold text right">R$ 150,00</span>
-						</a></li>
+						<?php foreach( $tickets as $ticket ){ ?>
+						<li class="group">
+							<a href="<?php echo $ticket['ticket_options_url']; ?>">
+								<span class="<?php echo $ticket['ticket_options_icon']; ?> icon"></span>
+								<span class="text left"><?php echo $ticket['ticket_options_type']; ?></span>
+								<span class="fw-bold text right"><?php echo $ticket['ticket_options_money']; ?></span>
+							</a>
+						</li>
+						<?php } ?>
 					</ul>
+					<?php } ?>
 				</div>
+				<?php }	?>	
 			</nav>
 			<nav id="main-nav" class="clr group">
 				<?php global $homeUrl; ?>
