@@ -4,8 +4,9 @@
 	<div class="centered clr">
 		<?php if(!is_home()) { ?>
 		<section class="fb-widget clr">
-			<h1 class="title fw-light c-green">Faça parte da conferência</h1>
-			<div class="hrz-facebook-widget">
+			<h1 class="title fw-light c-green">Faça parte da conferência</h1> 
+			<div class="fb-like" data-href="http://www.facebook.com/InteractionSouthAmerica" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>
+			<div class="hrz-facebook-widget clr">
 				<div class="fb-like-box" data-href="https://www.facebook.com/InteractionSouthAmerica" data-width="980" data-height="170" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
 			</div>
 		</section>
@@ -24,7 +25,7 @@
 		?>	
 		<section class="sponsors">
 			<?php if( $sp_silvers = get_field('sponsors_silver')) { ?>
-			<div class="left box sponsors-silver">
+			<div class="box sponsors-silver">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Prata</h3>
 				<?php foreach( $sp_silvers as $sp_silver ){ ?>
 				<a href="<?php echo $sp_silver['sponsors_silver_url']; ?>" title="<?php echo $sp_silver['sponsors_silver_name']; ?>">
@@ -36,7 +37,7 @@
 			</div>
 			<?php } ?>
 			<?php if( $sp_bronzes = get_field('sponsors_bronze')) { ?>
-			<div class="right box sponsors-bronze">
+			<div class="box sponsors-bronze">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Bronze</h3>
 				<ul class="sponsors-bronze-list group">
 					<?php $c = 0; ?>

@@ -363,6 +363,8 @@ p {
   border: 1px solid #e5e5e5;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 .twiiter-list-group .twitter-widget-hd, .twiiter-list-group .twitter-widget-body {
@@ -383,6 +385,8 @@ p {
   padding: 5px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 
@@ -548,33 +552,32 @@ p {
 }
 
 .icons-sprite, .comment-icon, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
-  background-image: url('i/icons-s1d2bfde1ab.png');
-  background-repeat: no-repeat;
+  background: url('i/icons-s93b9644b9a.png') no-repeat;
 }
 
 .comment-icon {
-  background-position: 0 -137px;
+  background-position: 0 -190px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .date-icon {
-  background-position: 0 -154px;
+  background-position: 0 -257px;
   width: 15px;
   height: 16px;
   display: inline-block;
 }
 
 .books-icon {
-  background-position: 0 0;
+  background-position: 0 -290px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .keynotes-icon {
-  background-position: 0 -290px;
+  background-position: 0 -273px;
   width: 17px;
   height: 17px;
   display: inline-block;
@@ -588,70 +591,70 @@ p {
 }
 
 .brown-glasses-icon {
-  background-position: 0 -17px;
+  background-position: 0 -50px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-pencil-icon {
-  background-position: 0 -47px;
+  background-position: 0 -120px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-university-icon {
-  background-position: 0 -77px;
+  background-position: 0 0;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-workshop-icon {
-  background-position: 0 -107px;
+  background-position: 0 -227px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .icon-facebook {
-  background-position: 0 -170px;
+  background-position: 0 -207px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-gplus {
-  background-position: 0 -190px;
+  background-position: 0 -80px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-linkedin {
-  background-position: 0 -210px;
+  background-position: 0 -170px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-rss {
-  background-position: 0 -230px;
+  background-position: 0 -100px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-share {
-  background-position: 0 -250px;
+  background-position: 0 -150px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-twitter {
-  background-position: 0 -270px;
+  background-position: 0 -30px;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -921,6 +924,8 @@ p {
   overflow: hidden;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
 }
 .twitter-widget-hd .twitter-name {
@@ -945,6 +950,14 @@ p {
 }
 .headline-blog .author {
   font-family: "Roboto";
+}
+
+.fb-widget .title {
+  float: left;
+  margin-right: 15px;
+}
+.fb-widget .fb-like {
+  margin-top: 8px;
 }
 
 .diamond-sponsor {
@@ -1191,6 +1204,8 @@ p {
 .circle-img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
 }
 

@@ -142,6 +142,13 @@
 
 .fb-widget{
 	@extend .speakers-section;
+	.title{
+		float: left;
+		margin-right: 15px;
+	}
+	.fb-like{
+		margin-top: 8px;
+	}
 }
 
 .diamond-sponsor{
