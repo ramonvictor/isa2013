@@ -22,9 +22,10 @@
 			$args = array( 'page_id' => 168);
 			$rv_query->query($args);
 			if( $rv_query->have_posts() ){	$rv_query->the_post();
+				$original_ID = icl_object_id( $post->ID, 'any', false, 'pt' );
 		?>	
 		<section class="sponsors">
-			<?php if( $sp_silvers = get_field('sponsors_silver')) { ?>
+			<?php if( $sp_silvers = get_field('sponsors_silver', $original_ID) ) { ?>
 			<div class="box sponsors-silver">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Prata</h3>
 				<?php foreach( $sp_silvers as $sp_silver ){ ?>
@@ -36,7 +37,7 @@
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<?php if( $sp_bronzes = get_field('sponsors_bronze')) { ?>
+			<?php if( $sp_bronzes = get_field('sponsors_bronze', $original_ID) ) { ?>
 			<div class="box sponsors-bronze">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Bronze</h3>
 				<ul class="sponsors-bronze-list group">
@@ -54,7 +55,7 @@
 				</ul>
 			</div>
 			<?php } ?>
-			<?php if( $sp_supporters = get_field('supporters')) { ?>
+			<?php if( $sp_supporters = get_field('supporters', $original_ID) ) { ?>
 			<div class="clr mb-30">
 				<h4 class="underlined-title c-gray fs-14">Apoiadores</h4>
 				<ul class="supporters-list group">
