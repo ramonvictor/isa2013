@@ -80,14 +80,14 @@
 			<ul class="credits group">
 				<li>
 					<span class="credits-label ff-roboto">Realização</span>
-					<a href="http://www.ixdarecife.org/">
-					<img src="<?php echo $baseUrl; ?>/img/ixda-recife-brand.png" height="35" width="84" alt="">
+					<a href="http://www.ixdarecife.org/" title="Ir para o site da IxDA Recife">
+						<img src="<?php echo $baseUrl; ?>/img/ixda-recife-brand.png" height="35" width="84" alt="IxDA Recife">
 					</a>
 				</li>
 				<li>
 					<span class="credits-label ff-roboto">Organização</span>
 					<a href="#">
-					<img src="<?php echo $baseUrl; ?>/img/mkt-hppn-brand.png" height="35" width="127" alt="">
+						<img src="<?php echo $baseUrl; ?>/img/mkt-hppn-brand.png" height="35" width="127" alt="MKT HPPN">
 					</a>
 				</li>
 			</ul>
