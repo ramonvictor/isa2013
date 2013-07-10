@@ -65,6 +65,11 @@
 				</ul>
 			</div>
 			<?php } ?>
+			<nav class="ft-nav right">
+				<ul>
+					<li><a href="#">Imprensa</a></li>
+				</ul>
+			</nav>
 			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="https://twitter.com/search?q=%23ISA13">#ISA13</a>? Baixe nosso <a href="http://isa.ixda.org/2013/propostapatrocinioisa2013marco.pdf">Media Kit</a> ou envie um e-mail para <a href="mailto: &#112;&#097;&#116;&#114;&#111;&#099;&#105;&#110;&#105;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">patrocinio@ixdarecife.org</a></p>
 		</section>
 		<?php }	?>	

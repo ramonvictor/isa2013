@@ -474,3 +474,13 @@
 .text-column{
 	width: 215px;
 }
+
+.ft-nav{
+	li{
+		float: left;
+		margin-right: 15px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
