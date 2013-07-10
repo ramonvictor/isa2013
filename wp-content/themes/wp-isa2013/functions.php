@@ -23,9 +23,21 @@ add_image_size('speaker-medium', 310, 410, true );
 add_image_size('keynote-thumb', 120, 90, true );
 add_image_size('book-thumb', 120, 160, true );
 
+// remove visual edit on schedule page
+add_filter( 'user_can_richedit', 'rv_page_can_richedit' );
+
+function rv_page_can_richedit( $can ) 
+{
+    global $post;
+    if ( 34 == $post->ID ){
+      return false;
+    }  
+
+    return $can;
+}
+
 
 function rv_get_tweets( $t_username, $t_length ){
-    
 
     $twitteruser = $t_username;
     $notweets = $t_length;

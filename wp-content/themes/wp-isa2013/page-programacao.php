@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <?php if( have_posts() ){ the_post(); ?>
 	<div id="schedule-wrapper">
+		<?php the_content(); ?>
+		<?php /*
 		<h1 class="content-title c-green">Quinta-feira - <strong>13, Nov</strong></h1>
 		<div class="schedule-table mb-30">
             <table>
@@ -332,7 +334,8 @@
 	                </tr>
                 </tbody>
             </table>
-        </div>      
+        </div>
+         */ ?>
 	</div>
 <?php } ?>
 <?php get_footer(); ?>
