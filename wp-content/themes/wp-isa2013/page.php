@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php global $baseUrl; ?>
 <?php if( have_posts() ){ the_post(); ?>
 	<div id="content">
 		<h1 class="content-title c-green"><?php the_title(); ?></h1>
@@ -19,7 +18,7 @@
 		<?php } ?>
 		<div class="content-entry ff-roboto">
 			<?php the_content(); ?>
-		</div>
+		</div>     
 	</div>
 	<?php if($is_default_sidebar = get_field('default_sidebar')){ ?>
 		<?php get_sidebar(); ?>

@@ -363,8 +363,6 @@ p {
   border: 1px solid #e5e5e5;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px;
 }
 .twiiter-list-group .twitter-widget-hd, .twiiter-list-group .twitter-widget-body {
@@ -385,8 +383,6 @@ p {
   padding: 5px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px;
 }
 
@@ -551,110 +547,213 @@ p {
   left: 178px;
 }
 
-.icons-sprite, .comment-icon, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
-  background: url('i/icons-s93b9644b9a.png') no-repeat;
+.schedule-table table {
+  width: 100%;
+  border: 1px solid #eeeeec;
+}
+.schedule-table tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+.schedule-table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+.schedule-table tr:hover td {
+  background: #fdfce3;
+}
+.schedule-table td {
+  width: 210px;
+  vertical-align: middle;
+  border: 1px solid #eeeeec;
+  border-width: 0 1px 1px 0;
+  text-align: left;
+  padding: 15px;
+  font-size: 11px;
+  color: #999;
+}
+.schedule-table .break-row td {
+  padding: 35px 15px;
+  background: #eeeeec;
+}
+.schedule-table .highlight-row td {
+  padding: 25px 15px;
+  background: #fff477;
+  border-right-color: transparent;
+}
+.schedule-table .dark-gray {
+  color: #333;
+}
+
+.square-bullet {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.square-bullet.green {
+  background: #d0d756;
+  border-color: #bac04c;
+}
+.square-bullet.green-blue {
+  background: #54c3c3;
+  border-color: #4baeae;
+}
+.square-bullet.orange {
+  background: #f76443;
+  border: 1px solid #dc593b;
+}
+
+.light-gray-title {
+  font-size: 18px;
+  color: #666;
+}
+
+.event-title {
+  color: #333;
+  margin-bottom: .4em;
+}
+.event-title .square-bullet {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.event-time {
+  font-size: 18px;
+  font-weight: 300;
+  color: #ccc;
+}
+.event-time strong {
+  color: #666;
+}
+
+.event-location {
+  color: #dc593b;
+  width: 215px;
+}
+.event-location .location-icon {
+  float: left;
+  margin: 5px 8px 0 0;
+}
+
+.text-column {
+  width: 215px;
+}
+
+.icons-sprite, .location-icon, .comment-icon, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
+  background-image: url('i/icons-s296dd46acc.png');
+  background-repeat: no-repeat;
+}
+
+.location-icon {
+  background-position: 0 -307px;
+  width: 17px;
+  height: 25px;
+  display: inline-block;
 }
 
 .comment-icon {
-  background-position: 0 -190px;
+  background-position: 0 -137px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .date-icon {
-  background-position: 0 -257px;
+  background-position: 0 -154px;
   width: 15px;
   height: 16px;
   display: inline-block;
 }
 
 .books-icon {
-  background-position: 0 -290px;
+  background-position: 0 0;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .keynotes-icon {
-  background-position: 0 -273px;
+  background-position: 0 -290px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .videos-icon {
-  background-position: 0 -307px;
+  background-position: 0 -332px;
   width: 17px;
   height: 17px;
   display: inline-block;
 }
 
 .brown-glasses-icon {
-  background-position: 0 -50px;
+  background-position: 0 -17px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-pencil-icon {
-  background-position: 0 -120px;
+  background-position: 0 -47px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-university-icon {
-  background-position: 0 0;
+  background-position: 0 -77px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .brown-workshop-icon {
-  background-position: 0 -227px;
+  background-position: 0 -107px;
   width: 30px;
   height: 30px;
   display: inline-block;
 }
 
 .icon-facebook {
-  background-position: 0 -207px;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-}
-
-.icon-gplus {
-  background-position: 0 -80px;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-}
-
-.icon-linkedin {
   background-position: 0 -170px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
+.icon-gplus {
+  background-position: 0 -190px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.icon-linkedin {
+  background-position: 0 -210px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
 .icon-rss {
-  background-position: 0 -100px;
+  background-position: 0 -230px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-share {
-  background-position: 0 -150px;
+  background-position: 0 -250px;
   width: 20px;
   height: 20px;
   display: inline-block;
 }
 
 .icon-twitter {
-  background-position: 0 -30px;
+  background-position: 0 -270px;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -924,8 +1023,6 @@ p {
   overflow: hidden;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
 }
 .twitter-widget-hd .twitter-name {
@@ -1204,8 +1301,6 @@ p {
 .circle-img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
 }
 

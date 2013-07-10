@@ -11,12 +11,6 @@
 			</div>
 		</section>
 		<?php } ?>
-		<section class="diamond-sponsor itau-big-banner">
-			<h2 class="title c-gray fw-light">Patrocinador Diamante</h2>
-			<img src="<?php echo $baseUrl; ?>/img/sponsors/itau-big-banner.jpg" height="275" width="950" alt="">
-			<a href="http://www.facebook.com/itau" class="facebook-link skip">Itaú no Facebook</a>
-			<a href="http://www.twitter.com/itau" class="twitter-link skip">Itaú no Twitter</a>
-		</section>
 		<?php 
 			$rv_query = new WP_Query();
 			$args = array( 'page_id' => 168);

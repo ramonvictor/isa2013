@@ -41,7 +41,7 @@
 	<!-- facebook meta -->
 	<meta property="og:title" content="Interaction South America 13 - Recife / Brasil"/>
 	<meta property="og:url" content="<?php echo $homeUrl; ?>"/>
-	<meta property="og:image" content="<?php echo $baseUrl; ?>/img/isa13-facebook.png"/>
+	<meta property="og:image" content="<?php echo $baseUrl; ?>/img/isa13-facebook.png" />
 	<meta property="og:description" content="Novas indústrias, novos modelos, novas interações. O Interaction South America é uma conferência anual que reúne profissionais e acadêmicos de Design e áreas relacionadas para participarem de Conversas, Palestras, Workshops e outras atividades para discutir sobre o papel do Design de Interação e o perfil do profissional no mercado e sua atuação na construção de uma nova economia."/>
 
 
@@ -180,13 +180,14 @@
 				<?php global $homeUrl; ?>
 				<ul class="group">
 					<li <?php if(is_home()){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>" title="Ir para: página inicial" tabindex="2">Home</a></li>
-					<li <?php if(is_page( icl_object_id(4, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(4, 'page', true) ); ?>" title="Ir para: página inicial" tabindex="2">A Conferência</a></li>
-					<li <?php if(is_page( icl_object_id(34, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(34, 'page', true) ); ?>" title="Ir para: página inicial" tabindex="2">Programação</a></li>
-					<li <?php if( is_post_type_archive('palestras') || (is_single() && get_query_var('post_type') == "palestras") ){ ?>class="current" <?php } ?>><a href="<?php echo $homeUrl; ?>/palestras" title="Ir para: página inicial" tabindex="2">Palestras</a></li>
-					<li <?php if(is_page( icl_object_id(35, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(35, 'page', true) ); ?>" title="Ir para: página inicial" tabindex="2">Workshops</a></li>
-					<li <?php if(is_page( icl_object_id(13, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(13, 'page', true) ); ?>" title="Ir para: página inicial" tabindex="2">Artigos</a></li>
-					<li <?php if(is_page( icl_object_id(39, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(39, 'page', true) ); ?>" title="Ir para: página inicial" tabindex="2">Cases</a></li> 
-					<li <?php if(is_page( icl_object_id(41, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(41, 'page', true) ); ?>" title="Ir para: página inicial" tabindex="2">Planeje sua viagem</a></li> 
+					<li <?php if(is_page( icl_object_id(4, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(4, 'page', true) ); ?>" title="Ir para: A Conferência" tabindex="2">A Conferência</a></li>
+					<li <?php if(is_page( icl_object_id(34, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(34, 'page', true) ); ?>" title="Ir para: Programação" tabindex="2">Programação</a></li>
+					<li <?php if( is_post_type_archive('palestras') || (is_single() && get_query_var('post_type') == "palestras") ){ ?>class="current" <?php } ?>><a href="<?php echo $homeUrl; ?>/palestras" title="Ir para: Palestras" tabindex="2">Palestras</a></li>
+					<li <?php if(is_page( icl_object_id(35, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(35, 'page', true) ); ?>" title="Ir para: Workshops" tabindex="2">Workshops</a></li>
+					<li <?php if(is_page( icl_object_id(13, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(13, 'page', true) ); ?>" title="Ir para: Artigos" tabindex="2">Artigos</a></li>
+					<li <?php if(is_page( icl_object_id(39, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(39, 'page', true) ); ?>" title="Ir para: Casos" tabindex="2">Casos</a></li> 
+					<li <?php if(is_page( icl_object_id(307, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(307, 'page', true) ); ?>" title="Ir para: Lightning Talks" tabindex="2">Lightning Talks</a></li> 
+					<li <?php if(is_page( icl_object_id(41, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(41, 'page', true) ); ?>" title="Ir para: Planeje sua viagem" tabindex="2">Planeje sua viagem</a></li> 
 					<li class="right"><a href="<?php echo $homeUrl; ?>/secao/blog">Blog</a></li> 
 				</ul>
 			</nav>

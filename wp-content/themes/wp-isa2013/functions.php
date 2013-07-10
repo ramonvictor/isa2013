@@ -23,6 +23,7 @@ add_image_size('speaker-medium', 310, 410, true );
 add_image_size('keynote-thumb', 120, 90, true );
 add_image_size('book-thumb', 120, 160, true );
 
+
 function rv_get_tweets( $t_username, $t_length ){
     
 
@@ -99,4 +100,9 @@ add_action('init', "rv_init");
 function rv_init(){
   PostType::register("Palestras", "palestras", "Palestra", "F", true);
   PostType::register("Artigos", "artigos", "Artigo", "M", true);
+  
+  // WPML prevent add files on theme
+  define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
+  define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
+  define('ICL_DONT_LOAD_LANGUAGES_JS', true);
 }
