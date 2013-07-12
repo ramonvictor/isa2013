@@ -253,12 +253,20 @@
 .blog-article-social{
 	float: right;
 	padding: 8px;
+	li{
+		float: left;
+		margin-right: 12px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
 }
 
 .blog-article-author{
 	position: relative;
 	left: -(35px/2);
 	color: #666;
+	float: left;
 	.thumb{
 		margin-right: 5px;
 	}
@@ -481,6 +489,33 @@
 		margin-right: 15px;
 		&:last-child{
 			margin-right: 0;
+		}
+	}
+}
+
+.share-bubble{
+	float: left;
+	margin-left: 5px;
+	a{
+		position: relative;
+		overflow: visible;
+		display: inline-block;
+		border: 1px solid #c0bab8;
+		padding: 0 10px;
+		color: #444;
+		background: #fff;
+		@include vertical-align(20px);
+		@include border-radius(2px);
+		&:after{
+			content: '';
+			display: block;
+			width: 5px;
+			height: 9px;
+			position: absolute;
+			top: 50%;
+			left: -5px;
+			margin-top: -5px;
+			background: url(i/share-bubble-arrow.png) no-repeat;
 		}
 	}
 }

@@ -6,7 +6,24 @@
 					<h1 class="c-orange"><?php the_title(); ?></h1>
 					<div class="blog-article-info group">
 						<div class="blog-article-social">
-							<img src="<?php echo $baseUrl; ?>/img/social-share-blog.png" height="22" width="304" alt="">
+							<ul>
+								<li>
+									<span class="share-facebook-icon left"></span>
+									<div class="share-bubble facebook-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>
+								<li>
+									<span class="share-twitter-icon left"></span>
+									<div class="share-bubble twitter-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>
+								<li>
+									<span class="share-gplus-icon left"></span>
+									<div class="share-bubble gplus-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>	
+								<li>
+									<span class="share-linkedin-icon left"></span>
+									<div class="share-bubble linkedin-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>						
+							</ul>
 						</div>
 						<div class="blog-article-time">
 							<time><?php echo get_the_time("d/m") ?></time>	

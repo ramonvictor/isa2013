@@ -7,7 +7,26 @@
 				<blockquote class="quotation-post">
 					<h1 class="quotation-title"><?php the_title(); ?></h1>
 					<footer class="group">
-						<img src="<?php echo $baseUrl; ?>/img/social-share-blog.png" height="22" width="304" alt="" class="right">
+						<div class="blog-article-social">
+							<ul>
+								<li>
+									<span class="share-facebook-icon left"></span>
+									<div class="share-bubble facebook-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>
+								<li>
+									<span class="share-twitter-icon left"></span>
+									<div class="share-bubble twitter-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>
+								<li>
+									<span class="share-gplus-icon left"></span>
+									<div class="share-bubble gplus-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>	
+								<li>
+									<span class="share-linkedin-icon left"></span>
+									<div class="share-bubble linkedin-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>						
+							</ul>
+						</div>
 						<cite class="quotation-author"><?php echo get_field("autor_referencia"); ?></cite>
 					</footer>
 				</blockquote>
@@ -16,7 +35,24 @@
 					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					<div class="blog-article-info group">
 						<div class="blog-article-social">
-							<img src="<?php echo $baseUrl; ?>/img/social-share-blog.png" height="22" width="304" alt="">
+							<ul>
+								<li>
+									<span class="share-facebook-icon left"></span>
+									<div class="share-bubble facebook-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>
+								<li>
+									<span class="share-twitter-icon left"></span>
+									<div class="share-bubble twitter-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>
+								<li>
+									<span class="share-gplus-icon left"></span>
+									<div class="share-bubble gplus-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>	
+								<li>
+									<span class="share-linkedin-icon left"></span>
+									<div class="share-bubble linkedin-bubble" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>"></div>
+								</li>						
+							</ul>
 						</div>
 						<div class="blog-article-time">
 							<time><?php echo get_the_time("d/m") ?></time>	
@@ -34,7 +70,7 @@
 				<div class="blog-article-ft">
 					<a href="<?php the_permalink(); ?>#post-comments" class="comment-link">
 						<span class="comment-icon"></span>
-						31 commentários
+						<fb:comments-count href="<?php echo get_permalink($post->ID); ?>"></fb:comments-count> commentários
 					</a>
 				</div>
 				<?php } ?>				

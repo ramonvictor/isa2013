@@ -105,6 +105,9 @@
 <!--<![endif]-->
 <script src="<?php echo $baseUrl; ?>/js/hover-dropdown.min.js"></script>
 <script src="<?php echo $baseUrl; ?>/js/cycle.js"></script>
+<?php if(is_single()||is_category("blog")){ ?>
+<script src="<?php echo $baseUrl; ?>/js/jquery.sharrre.min.js"></script>
+<?php } ?>
 <script src="<?php echo $baseUrl; ?>/js/isa2013.fn.js"></script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

@@ -26,6 +26,71 @@
 		}
 	}
 
+	var twitter_bubble = $('.twitter-bubble');
+	if( twitter_bubble.length ){
+		
+		twitter_bubble.sharrre({
+		  share: {
+		    twitter: true
+		  },
+		  enableHover: false,
+		  enableTracking: true,
+		  buttons: { 
+		  	twitter: {via: 'ISAmerica13'}
+		  },
+		  click: function(api, options){
+		    api.simulateClick();
+		    api.openPopup('twitter');
+		  }
+		});
+	}
+	var facebook_bubble = $('.facebook-bubble');
+	if( facebook_bubble.length ){
+		facebook_bubble.sharrre({
+		  share: {
+		    facebook: true
+		  },
+		  enableHover: false,
+		  enableTracking: true,
+		  click: function(api, options){
+		    api.simulateClick();
+		    api.openPopup('facebook');
+		  }
+		});
+	}
+
+	var gplus_bubble = $('.gplus-bubble');
+	if( gplus_bubble.length ){
+		gplus_bubble.sharrre({
+		  share: {
+		    googlePlus: true
+		  },
+		  enableHover: false,
+		  enableTracking: true,
+		  urlCurl: '/2013/wp/wp-content/themes/wp-isa2013/sharrre.php',
+		  click: function(api, options){
+		    api.simulateClick();
+		    api.openPopup('googlePlus');
+		  }
+		});
+	}
+
+	var linkedin_bubble = $('.linkedin-bubble');
+	if( linkedin_bubble.length ){
+		linkedin_bubble.sharrre({
+		  share: {
+		    linkedin: true
+		  },
+		  enableHover: false,
+		  enableTracking: true,
+		  click: function(api, options){
+		    api.simulateClick();
+		    api.openPopup('linkedin');
+		  }
+		});
+	}
+	
+
 }(jQuery));
 
 //get id with performance
