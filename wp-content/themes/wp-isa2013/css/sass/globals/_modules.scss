@@ -486,6 +486,9 @@
 .ft-nav{
 	li{
 		float: left;
+		font-family: "Roboto";
+		font-size: 12px;
+		text-transform: uppercase;
 		margin-right: 15px;
 		&:last-child{
 			margin-right: 0;
@@ -526,4 +529,8 @@
 			min-height: 140px;
 		}
 	}
+}
+
+.icl_post_in_other_langs{
+	display: none;
 }

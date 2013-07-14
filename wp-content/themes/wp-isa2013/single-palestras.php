@@ -88,12 +88,11 @@
 			<h3 class="underlined-title icon-title"><span class="keynotes-icon icon"></span> Keynotes</h3>
 				<ul class="group thumb-hrz-list">					
 						<?php foreach( $keynotes as $keynote ){ ?>
-							<li><a href="<?php echo $keynote['kenotes_url']; ?>">
+							<li><a href="<?php echo $keynote['kenotes_url']; ?>" rel="external">
 									<?php if( $keynote_img = $keynote['keynotes_image']['sizes']['keynote-thumb']) { ?>
 										<img src="<?php echo $keynote_img; ?>" height="90" width="120" alt="">
 									<?php } ?>
 									<strong class="title ff-roboto"><?php echo $keynote['keynotes_title']; ?></strong>
-									<!-- <small class="fs-10 ff-roboto">398 views</small> -->
 								</a>
 							</li>
 						<?php } ?>					
@@ -106,7 +105,7 @@
 				<ul class="group thumb-hrz-list">
 					<?php foreach( $videos as $video ){ ?>
 						<li>
-							<a href="<?php echo $video['videos_url']; ?>">
+							<a href="<?php echo $video['videos_url']; ?>" rel="external" title="<?php echo $video['videos_title']; ?>">
 								<?php 
 									$video_thumb = "";
 									if($video['videos_provider'] == "Youtube") {
@@ -119,8 +118,8 @@
 									}
 								?>
 								<img src="<?php echo $video_thumb; ?>" height="65" width="120" alt="">
-								<strong class="title ff-roboto"><?php echo $video['videos_title']; ?></strong>
-								<!-- <small class="fs-10 ff-roboto">1.186.006 views</small> -->
+								<?php $videoTitle = Geral::my_excerpt($video['videos_title'], 7, '...', ''); ?>
+								<strong class="title ff-roboto"><?php echo $videoTitle; ?></strong>
 							</a>
 						</li>
 					<?php } ?>	
@@ -130,17 +129,17 @@
 		<?php if( $books = get_field('books') ){ ?>
 		<section class="profile-videos mb-20">
 			<h3 class="underlined-title icon-title"><span class="books-icon icon"></span> Livros</h3>
-				<ul class="group thumb-hrz-list">
-					<?php foreach( $books as $book ){ ?>
-					<li><a href="<?php echo $book['books_url']; ?>">
-							<?php if( $book_img = $book['books_image']['sizes']['book-thumb']) { ?>
-								<img src="<?php echo $book_img; ?>" height="158" width="120" alt="">
-							<?php } ?>
-							<strong class="title ff-roboto"><?php echo $book['books_title']; ?></strong>
-						</a>
-					</li>
-					<?php } ?>
-				</ul>
+			<ul class="group thumb-hrz-list">
+				<?php foreach( $books as $book ){ ?>
+				<li><a href="<?php echo $book['books_url']; ?>" rel="external">
+						<?php if( $book_img = $book['books_image']['sizes']['book-thumb']) { ?>
+							<img src="<?php echo $book_img; ?>" height="158" width="120" alt="">
+						<?php } ?>
+						<strong class="title ff-roboto"><?php echo $book['books_title']; ?></strong>
+					</a>
+				</li>
+				<?php } ?>
+			</ul>
 		</section>
 		<?php } ?>
 	</div>

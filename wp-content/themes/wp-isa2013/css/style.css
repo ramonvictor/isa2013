@@ -652,6 +652,9 @@ p {
 
 .ft-nav li {
   float: left;
+  font-family: "Roboto";
+  font-size: 12px;
+  text-transform: uppercase;
   margin-right: 15px;
 }
 .ft-nav li:last-child {
@@ -690,6 +693,10 @@ p {
 
 .profile-videos .thumb-hrz-list li {
   min-height: 140px;
+}
+
+.icl_post_in_other_langs {
+  display: none;
 }
 
 .icons-sprite, .share-facebook-icon, .share-gplus-icon, .share-linkedin-icon, .share-twitter-icon, .location-icon, .comment-icon, .date-icon, .books-icon, .keynotes-icon, .videos-icon, .brown-glasses-icon, .brown-pencil-icon, .brown-university-icon, .brown-workshop-icon, .icon-facebook, .icon-gplus, .icon-linkedin, .icon-rss, .icon-share, .icon-twitter {
@@ -991,16 +998,16 @@ p {
   padding-bottom: 30px;
 }
 
-.speakers-list > li {
+.speakers-list > li, .team-list > li {
   float: left;
   width: 180px;
   margin: 0 12px 15px 0;
 }
-.speakers-list > li img {
+.speakers-list > li img, .team-list > li img {
   display: block;
   margin-bottom: 10px;
 }
-.speakers-list > li.no-mr {
+.speakers-list > li.no-mr, .team-list > li.no-mr {
   margin-right: 0;
 }
 
@@ -1041,6 +1048,35 @@ p {
 }
 .speaker-box:hover .name {
   color: #f76443;
+}
+
+.team-list > li {
+  min-height: 265px;
+  margin: 0 23px 23px 0;
+}
+
+.member-box {
+  display: block;
+  position: relative;
+}
+.member-box .name {
+  display: block;
+  color: #99cc00;
+  margin-bottom: 3px;
+}
+.member-box .position {
+  display: block;
+  color: #999;
+}
+.member-box .profile-picture {
+  height: 200px;
+  margin-bottom: 10px;
+}
+.member-box .profile-picture img {
+  margin-bottom: 0;
+}
+.member-box .profile-picture .social-networks {
+  padding: 12px 0;
 }
 
 .highlights-section {
@@ -1148,10 +1184,6 @@ p {
 }
 .sponsors .box {
   margin-bottom: 24px;
-}
-
-.sponsors-bronze {
-  width: 633px;
 }
 
 .sponsors-bronze-list li {

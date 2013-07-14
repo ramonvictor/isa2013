@@ -19,6 +19,7 @@
 	}
 }
 
+
 .speakers-section{
 	margin-bottom: 30px;
 	.title{
@@ -53,6 +54,37 @@
 		}
 		.name{
 			color: $orange;
+		}
+	}
+}
+
+.team-list{
+	@extend .speakers-list;
+	&>li{
+		min-height: 265px;
+		margin: 0 23px 23px 0;
+	}
+}
+.member-box{
+	display: block;
+	position: relative;
+	.name {
+		display: block;
+		color: $melon-green;
+		margin-bottom: 3px;
+	}
+	.position{
+		display: block;
+		color: #999;
+	}
+	.profile-picture{
+		height: 200px;
+		margin-bottom: 10px;
+		img{
+			margin-bottom: 0;
+		}
+		.social-networks{
+			padding: 12px 0;
 		}
 	}
 }
@@ -166,9 +198,6 @@
 	}
 }
 
-.sponsors-bronze{
-	width: 633px;
-}
 
 .sponsors-bronze-list{
 	li{

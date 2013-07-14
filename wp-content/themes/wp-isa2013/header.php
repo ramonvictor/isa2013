@@ -85,12 +85,14 @@
 	<div id="hd" class="centered">
 		<div id="top-bar group">
 			<ul class="isa13-social group">
-<!-- 				<li>
+				<?php /*
+				<li>
 					<a href="#" class="icon-alone fs-16">
 						<span aria-hidden="true" data-icon="&#x73;"></span>
 						<span class="screen-reader-text">Share</span>
 					</a>
-				</li> -->
+				</li> 
+				 */ ?>
 				<li>
 					<a href="https://www.facebook.com/InteractionSouthAmerica" class="icon-alone">
 						<span aria-hidden="true" data-icon="&#x66;"></span>
@@ -103,12 +105,14 @@
 						<span class="screen-reader-text">Twitter</span>
 					</a>	
 				</li>				
-<!-- 				<li>
+				<?php /*			
+				<li>
 					<a href="#" class="icon-alone">
 						<span aria-hidden="true" data-icon="&#x6c;"></span>
 						<span class="screen-reader-text">LinkedIn</span>
 					</a>
-				</li> -->
+				</li> 
+				*/ ?>
 				<li>
 					<a href="https://plus.google.com/u/0/b/100064025635605412866/100064025635605412866" class="icon-alone">
 						<span aria-hidden="true" data-icon="&#x67;"></span>
@@ -151,7 +155,7 @@
 					if( $rv_query->have_posts() ){
 						$rv_query->the_post();
 				?>
-				<a href="#" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">
+				<a href="<?php the_permalink(); ?>" class="big-btn" class="dropdown-toggle" tabindex="2" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">
 					&raquo; <?php the_title(); ?>
 				</a>
 				<div class="register-subnav dropdown-menu hide" role="menu">
