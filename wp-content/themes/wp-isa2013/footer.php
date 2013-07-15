@@ -11,6 +11,7 @@
 			</div>
 		</section>
 		<?php } ?>
+
 		<?php 
 			$rv_query = new WP_Query();
 			$args = array( 'page_id' => 168);
@@ -19,11 +20,23 @@
 				$original_ID = icl_object_id( $post->ID, 'any', false, 'pt' );
 		?>	
 		<section class="sponsors">
+			<?php if( $sp_golds = get_field('sponsors_gold', $original_ID) ) { ?>
+			<div class="box sponsors-silver">
+				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Ouro</h3>
+				<?php foreach( $sp_golds as $sp_gold ){ ?>
+				<a href="<?php echo $sp_gold['sponsors_gold_url']; ?>" title="<?php echo $sp_gold['sponsors_gold_name']; ?>" class="sponsor-brand">
+					<?php if( $sp_gold_img = $sp_gold['sponsors_gold_image']['sizes']['large']) { ?>
+						<img src="<?php echo $sp_gold_img; ?>" alt="<?php echo $sp_gold['sponsors_gold_name']; ?>">
+					<?php } ?>
+				</a>
+				<?php } ?>
+			</div>
+			<?php } ?>
 			<?php if( $sp_silvers = get_field('sponsors_silver', $original_ID) ) { ?>
 			<div class="box sponsors-silver">
 				<h3 class="underlined-title fs-16 c-gray">Patrocinadores Prata</h3>
 				<?php foreach( $sp_silvers as $sp_silver ){ ?>
-				<a href="<?php echo $sp_silver['sponsors_silver_url']; ?>" title="<?php echo $sp_silver['sponsors_silver_name']; ?>">
+				<a href="<?php echo $sp_silver['sponsors_silver_url']; ?>" title="<?php echo $sp_silver['sponsors_silver_name']; ?>" class="sponsor-brand">
 					<?php if( $sp_silver_img = $sp_silver['sponsors_silver_image']['sizes']['large']) { ?>
 							<img src="<?php echo $sp_silver_img; ?>" alt="<?php echo $sp_silver['sponsors_silver_name']; ?>">
 					<?php } ?>
@@ -65,13 +78,25 @@
 				</ul>
 			</div>
 			<?php } ?>
+			<?php if( $media_partners = get_field('media_partners', $original_ID) ) { ?>
+			<div class="box sponsors-silver">
+				<h3 class="underlined-title fs-16 c-gray">Parceiros de mídia</h3>
+				<?php foreach( $media_partners as $partner ){ ?>
+				<a href="<?php echo $partner['sponsors_gold_url']; ?>" title="<?php echo $partner['sponsors_gold_name']; ?>" class="sponsor-brand">
+					<?php if( $partner_img = $partner['sponsors_gold_image']['sizes']['large']) { ?>
+						<img src="<?php echo $partner_img; ?>" alt="<?php echo $partner['sponsors_gold_name']; ?>">
+					<?php } ?>
+				</a>
+				<?php } ?>
+			</div>
+			<?php } ?>
 			<nav class="ft-nav right">
 				<ul>
 					<li><a href="<?php echo get_permalink( icl_object_id(438, 'page', true) ); ?>">Imprensa</a></li>
 					<li><a href="<?php echo get_permalink( icl_object_id(433, 'page', true) ); ?>">Equipe</a></li>
 				</ul>
 			</nav>
-			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="https://twitter.com/search?q=%23ISA13">#ISA13</a>? Baixe nosso <a href="http://isa.ixda.org/2013/propostapatrocinioisa2013marco.pdf">Media Kit</a> ou envie um e-mail para <a href="mailto: &#112;&#097;&#116;&#114;&#111;&#099;&#105;&#110;&#105;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">patrocinio@ixdarecife.org</a></p>
+			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="https://twitter.com/search?q=%23ISA13">#ISA13</a>? Baixe nosso <a href="http://isa.ixda.org/2013/propostapatrocinioisa2013marco.pdf">Media Kit</a> ou envie um e-mail para <a href="mailto: &#112;&#097;&#116;&#114;&#111;&#099;&#105;&#110;&#105;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">patrocinio@ixdarecife.org</a>.</p>
 		</section>
 		<?php }	?>	
 	</div>
@@ -92,7 +117,7 @@
 				</li>
 			</ul>
 			<p class="ff-roboto fs-12 c-gray">Interaction South America 2013 - Copyleft © 2013 todo conteúdo pode ser reproduzido desde que mencionado a fonte.<br>
-			<span class="c-gray-light">Fale com a organização</span>: <a href="mailto: &#099;&#111;&#110;&#116;&#097;&#116;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">contato@ixdarecife.org</a> | +55 31 9919.4565</p>
+			<span class="c-gray-light">Fale com a organização</span>: <a href="mailto: &#099;&#111;&#110;&#116;&#097;&#116;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">contato@ixdarecife.org</a>.</p>
 		</div>
 	</div>
 </footer>

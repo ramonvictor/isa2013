@@ -16,6 +16,7 @@ $share_icons_code =  array(
 
 add_theme_support('post-thumbnails');
 
+define('ICL_LANGUAGE_CODE', true);
 
 add_image_size('article-owner-thumb', 145, 195, true );
 add_image_size('speaker-thumb', 180, 200, true );

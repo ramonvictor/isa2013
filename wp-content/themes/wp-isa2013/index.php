@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php global $baseUrl; ?>
+	<?php global $baseUrl; ?>
 	<section class="speakers-section group">
 		<h1 class="title fw-light c-green">14 palestrantes confirmados</h1>
 		<ul class="speakers-list">
