@@ -130,9 +130,11 @@
 			?>
 			<ul class="languages-nav group">
 				<?php foreach ( $langs as $lang ) { ?>
-				<li <?php if($lang['active']){ ?>class="current"<?php } ?> >
-					<a href="<?php echo $lang['url']; ?>"><?php echo $lang['native_name']; ?></a>
-				</li>
+					<?php if( $lang['native_name'] != "Español"){ ?>
+					<li <?php if($lang['active']){ ?>class="current"<?php } ?> >
+						<a href="<?php echo $lang['url']; ?>"><?php echo $lang['native_name']; ?></a>
+					</li>
+					<?php } ?>
 				<?php } ?>
 			</ul>
 		</div>
@@ -187,19 +189,7 @@
 				<?php }	?>	
 			</nav>
 			<nav id="main-nav" class="clr group">
-				<?php global $homeUrl; ?>
-				<ul class="group">
-					<li <?php if(is_home()){ ?>class="current"<?php } ?>><a href="<?php echo $homeUrl; ?>" title="Ir para: página inicial" tabindex="2">Home</a></li>
-					<li <?php if(is_page( icl_object_id(4, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(4, 'page', true) ); ?>" title="Ir para: A Conferência" tabindex="2">A Conferência</a></li>
-					<li <?php if(is_page( icl_object_id(34, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(34, 'page', true) ); ?>" title="Ir para: Programação" tabindex="2">Programação</a></li>
-					<li <?php if( is_post_type_archive('palestras') || (is_single() && get_query_var('post_type') == "palestras") ){ ?>class="current" <?php } ?>><a href="<?php echo $homeUrl; ?>/palestras" title="Ir para: Palestrantes" tabindex="2">Palestrantes</a></li>
-					<li <?php if(is_page( icl_object_id(35, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(35, 'page', true) ); ?>" title="Ir para: Workshops" tabindex="2">Workshops</a></li>
-					<li <?php if(is_page( icl_object_id(13, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(13, 'page', true) ); ?>" title="Ir para: Artigos" tabindex="2">Artigos</a></li>
-					<li <?php if(is_page( icl_object_id(39, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(39, 'page', true) ); ?>" title="Ir para: Casos" tabindex="2">Casos</a></li> 
-					<li <?php if(is_page( icl_object_id(307, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(307, 'page', true) ); ?>" title="Ir para: Lightning Talks" tabindex="2">Lightning Talks</a></li> 
-					<li <?php if(is_page( icl_object_id(41, 'page', true) )){ ?>class="current"<?php } ?>><a href="<?php echo get_permalink( icl_object_id(41, 'page', true) ); ?>" title="Ir para: Planeje sua viagem" tabindex="2">Planeje sua viagem</a></li> 
-					<li class="right"><a href="<?php echo $homeUrl; ?>/secao/blog">Blog</a></li> 
-				</ul>
+				<?php if(function_exists(clean_custom_menus)) clean_custom_menus('principal'); ?>
 			</nav>
 		</div>
 	</div>

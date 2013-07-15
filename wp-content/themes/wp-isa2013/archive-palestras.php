@@ -14,7 +14,13 @@
 						<h2 class="country fs-12 c-green mb-15"><?php echo $location; ?></h2>
 					<?php } ?>
 					<p><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>" class="more-btn">+ Mais</a>
+					<a href="<?php the_permalink(); ?>" class="more-btn">
+						<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
+						+ More
+						<?php } else { ?>
+						+ Mais
+						<?php } ?>
+					</a>
 				</div>
 			</li>
 			<?php } ?>

@@ -1,7 +1,13 @@
 <?php get_header(); ?>
 	<?php global $baseUrl; ?>
 	<section class="speakers-section group">
-		<h1 class="title fw-light c-green">14 palestrantes confirmados</h1>
+		<h1 class="title fw-light c-green">
+			<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
+			14 speakers
+			<?php } else { ?>
+			14 palestrantes confirmados
+			<?php } ?>
+		</h1>
 		<ul class="speakers-list">
 			<?php 
 				$rv_query = new WP_Query();
@@ -51,7 +57,7 @@
 				if( $rv_query->have_posts() ){
 					$rv_query->the_post();
 			?>
-				<h1 class="fs-30 title">Artigos cientificos</h1>
+				<h1 class="fs-30 title"><?php the_title(); ?></h1>
 				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
 				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Submeta seu artigo</a>
 			<?php }	?>
@@ -64,7 +70,7 @@
 				if( $rv_query->have_posts() ){
 					$rv_query->the_post();
 			?>
-			<h1 class="fs-30 title">Cases de mercado</h1>
+			<h1 class="fs-30 title"><?php the_title(); ?></h1>
 			<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
 			<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Submeta seu case</a>
 			<?php }	?>	
@@ -99,7 +105,8 @@
 						);
 				$rv_query->query($args);
 				if( $rv_query->have_posts() ){
-					while( $rv_query->have_posts() ){ $rv_query->the_post();
+					while( $rv_query->have_posts() ){ 
+							$rv_query->the_post();
 			?>
 			<div class="headline-section headline-blog">
 				<article class="blog-headline">

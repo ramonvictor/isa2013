@@ -119,3 +119,52 @@ function rv_init(){
   define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
   define('ICL_DONT_LOAD_LANGUAGES_JS', true);
 }
+
+
+register_nav_menu( 'principal', 'Menu Principal' );
+// register_nav_menu( 'principal-en', 'Menu Principal(en)' );
+function clean_custom_menus($menu_name, $lang = "pt") {
+  global $homeUrl;
+  if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    $menu_items = wp_get_nav_menu_items($menu->term_id);
+    $menu_list .= "\t\t\t\t". '<ul class="main-nav-list group" >' ."\n";
+
+    foreach ((array) $menu_items as $key => $menu_item) {
+      $currentClass = "";
+      $title = $menu_item->title;
+      $url = $menu_item->url;
+      $parent = $menu_item->menu_item_parent; 
+
+      if($url == rv_get_current_url()){
+        $currentClass = 'class="current"';
+      }
+
+      if(!$parent){
+        $i = 0;
+        if($menu_items[$key+1]->menu_item_parent){
+          $has_sub = ' class="dropdown"';
+          $menu_list .= "\t\t\t\t\t". '</li><li'.$has_sub.'><a href="'.$url.'" title="Ir para: '. $title .'" tabindex="2"  data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">'. $title .'<span class="subnav-arrow"></a>';
+        }else{
+           $menu_list .= "\t\t\t\t\t". '</li><li '. $currentClass .'><a href="'. $url .'"  title="Ir para: '. $title .'" tabindex="'.($key+2).'">'. $title .'</a>';
+        }
+      }else{
+        if($i == 0){ $menu_list .= '<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" >'; }
+        $i++;
+        if(!$menu_items[$key+1]->menu_item_parent){
+          $menu_list .= '<li class="last" ><a href="'. $url .'" title="Ir para: '. $title .'" tabindex="'.($key+2).'">'. $title .'</a></li>';
+          $menu_list .= '</ul>';
+        }else{
+          $menu_list .= '<li><a href="'. $url .'" title="Ir para: '. $title .'" tabindex="'.($key+2).'">'. $title .'</a></li>';
+        }          
+       }
+    }
+
+    $menu_list .= '<li class="right"><a href="' . $homeUrl . '/secao/blog">Blog</a></li>';
+
+    $menu_list .= "\t\t\t\t". '</ul>' ."\n";
+  } else {
+    $menu_list = '<!-- no list defined -->';
+  }
+  echo $menu_list;
+} 

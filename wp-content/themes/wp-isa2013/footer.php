@@ -2,23 +2,26 @@
 <footer id="ft-wrapper">
 	<?php global $baseUrl; ?>
 	<div class="centered clr">
-		<?php if(!is_home()) { ?>
 		<section class="fb-widget clr">
-			<h1 class="title fw-light c-green">Faça parte da conferência</h1> 
+			<h1 class="title fw-light c-green">
+				<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
+				Facebook
+				<?php } else { ?>
+				Faça parte da conferência
+				<?php } ?>
+			</h1> 
 			<div class="fb-like" data-href="http://www.facebook.com/InteractionSouthAmerica" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>
 			<div class="hrz-facebook-widget clr">
 				<div class="fb-like-box" data-href="https://www.facebook.com/InteractionSouthAmerica" data-width="980" data-height="170" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
 			</div>
 		</section>
-		<?php } ?>
-
 		<?php 
 			$rv_query = new WP_Query();
-			$args = array( 'page_id' => 168);
+			$args = array( 'page_id' => icl_object_id(168, 'page', false, 'pt-br' ) );
 			$rv_query->query($args);
 			if( $rv_query->have_posts() ){	$rv_query->the_post();
-				$original_ID = icl_object_id( $post->ID, 'any', false, 'pt' );
-		?>	
+				$original_ID = icl_object_id(168, 'page', false, 'pt-br' );
+		?>
 		<section class="sponsors">
 			<?php if( $sp_golds = get_field('sponsors_gold', $original_ID) ) { ?>
 			<div class="box sponsors-silver">
@@ -82,9 +85,9 @@
 			<div class="box sponsors-silver">
 				<h3 class="underlined-title fs-16 c-gray">Parceiros de mídia</h3>
 				<?php foreach( $media_partners as $partner ){ ?>
-				<a href="<?php echo $partner['sponsors_gold_url']; ?>" title="<?php echo $partner['sponsors_gold_name']; ?>" class="sponsor-brand">
-					<?php if( $partner_img = $partner['sponsors_gold_image']['sizes']['large']) { ?>
-						<img src="<?php echo $partner_img; ?>" alt="<?php echo $partner['sponsors_gold_name']; ?>">
+				<a href="<?php echo $partner['media_partners_url']; ?>" title="<?php echo $partner['media_partners_name']; ?>" class="sponsor-brand">
+					<?php if( $partner_img = $partner['media_partners_image']['sizes']['large']) { ?>
+						<img src="<?php echo $partner_img; ?>" alt="<?php echo $partner['media_partners_name']; ?>">
 					<?php } ?>
 				</a>
 				<?php } ?>
@@ -92,8 +95,18 @@
 			<?php } ?>
 			<nav class="ft-nav right">
 				<ul>
+					<?php if(ICL_LANGUAGE_CODE == "pt-br"){ ?>
 					<li><a href="<?php echo get_permalink( icl_object_id(438, 'page', true) ); ?>">Imprensa</a></li>
-					<li><a href="<?php echo get_permalink( icl_object_id(433, 'page', true) ); ?>">Equipe</a></li>
+					<?php } ?>
+					<li>
+						<a href="<?php echo get_permalink( icl_object_id(433, 'page', true) ); ?>">
+							<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
+							Team
+							<?php } else { ?>
+							Equipe
+							<?php } ?>
+						</a>
+					</li>
 				</ul>
 			</nav>
 			<p class="fs-12 ff-roboto c-gray">Quer patrocinar o <a href="https://twitter.com/search?q=%23ISA13">#ISA13</a>? Baixe nosso <a href="http://isa.ixda.org/2013/propostapatrocinioisa2013marco.pdf">Media Kit</a> ou envie um e-mail para <a href="mailto: &#112;&#097;&#116;&#114;&#111;&#099;&#105;&#110;&#105;&#111;&#064;&#105;&#120;&#100;&#097;&#114;&#101;&#099;&#105;&#102;&#101;&#046;&#111;&#114;&#103;">patrocinio@ixdarecife.org</a>.</p>
