@@ -39,40 +39,42 @@
 		<div class="highlight-section green-box">
 			<?php 
 				$rv_query = new WP_Query();
-				$args = array( 'page_id' => 35, 'suppress_filters' => FALSE );
+				$args = array( 'page_id' => 35, 'suppress_filters' => FALSE ); // Workshops
 				$rv_query->query($args);
 				if( $rv_query->have_posts() ){
 					$rv_query->the_post();
 			?>
 				<h1 class="fs-30 title"><?php the_title(); ?></h1>
 				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
-				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Inscreva-se</a>
+				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">
+					&raquo; <?php _e('Inscreva-se', 'wp-isa2013');  ?>
+				</a>
 			<?php }	?>	
 		</div>
 		<div class="highlight-section light-red-box">
 			<?php 
 				$rv_query = new WP_Query();
-				$args = array( 'page_id' => 13, 'suppress_filters' => FALSE );
+				$args = array( 'page_id' => 13, 'suppress_filters' => FALSE ); // Artigos Acadêmicos
 				$rv_query->query($args);
 				if( $rv_query->have_posts() ){
 					$rv_query->the_post();
 			?>
 				<h1 class="fs-30 title"><?php the_title(); ?></h1>
 				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
-				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Submeta seu artigo</a>
+				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; <?php _e('Submeta seu artigo', 'wp-isa2013');  ?></a>
 			<?php }	?>
 		</div>
 		<div class="highlight-section melon-green-box">
 			<?php 
 				$rv_query = new WP_Query();
-				$args = array( 'page_id' => 39, 'suppress_filters' => FALSE );
+				$args = array( 'page_id' => 39, 'suppress_filters' => FALSE ); // Casos de mercado
 				$rv_query->query($args);
 				if( $rv_query->have_posts() ){
 					$rv_query->the_post();
 			?>
 			<h1 class="fs-30 title"><?php the_title(); ?></h1>
 			<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
-			<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; Submeta seu case</a>
+			<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; <?php _e('Acompanhe', 'wp-isa2013');  ?></a>
 			<?php }	?>	
 		</div>
 	</section>
