@@ -11,7 +11,6 @@
 			<p><?php the_content(); ?></p>
 		</div>
 	<?php }	?>	
-	<?php if ( is_user_logged_in() ) { ?>
 	<ul class="presentation-list">
 		<?php if( have_posts() ){  while( have_posts() ){ the_post(); ?>
 			<li class="group">
@@ -23,20 +22,31 @@
 						<a href="<?php echo $inscricao_url; ?>"><?php the_post_thumbnail( "speaker-thumb" ); ?></a>
 					</figure>
 				<?php } ?>
-				<div class="entry">
+				<div class="entry content-entry">
 					<h1 class="name"><a href="<?php echo $inscricao_url; ?>" class="c-melon-green"><?php the_title(); ?></a></h1>
 					<p><?php the_content(); ?></p>
-					<a href="<?php echo $inscricao_url; ?>" class="more-btn">
-						<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
-						Register
-						<?php } else { ?>
-						Inscrever-se
-						<?php } ?>
-					</a>
+					<?php if( $inscricao_url == "#"){ ?>
+						<p>
+							<strong class="c-orange">
+								<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
+								Registration will be opened 12 August at 2pm (Brasília, GMT-03:00)
+								<?php } else { ?>
+								Inscrições serāo abertas no dia 12/08
+								<?php } ?>								
+							</strong>
+						</p>
+					<?php } else { ?>
+						<a href="<?php echo $inscricao_url; ?>" class="more-btn">
+							<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
+							Register
+							<?php } else { ?>
+							Inscrever-se
+							<?php } ?>
+						</a>
+					<?php } ?>
 				</div>
 			</li>
 			<?php } ?>
 		<?php } ?>
 	</ul>	
-	<?php } ?>
 <?php get_footer(); ?>
