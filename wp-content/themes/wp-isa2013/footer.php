@@ -93,6 +93,18 @@
 				<?php } ?>
 			</div>
 			<?php } ?>
+			<?php if( $academic_support = get_field('academic_support', $original_ID) ) { ?>
+			<div class="box sponsors-silver">
+				<h3 class="underlined-title fs-16 c-gray">Parceiros acadêmicos</h3>
+				<?php foreach( $academic_support as $partner ){ ?>
+				<a href="<?php echo $partner['academic_support_url']; ?>" title="<?php echo $partner['academic_support_name']; ?>" class="sponsor-brand">
+					<?php if( $partner_img = $partner['academic_support_image']['sizes']['large']) { ?>
+						<img src="<?php echo $partner_img; ?>" alt="<?php echo $partner['academic_support_name']; ?>">
+					<?php } ?>
+				</a>
+				<?php } ?>
+			</div>
+			<?php } ?>
 			<nav class="ft-nav right">
 				<ul>
 					<?php if(ICL_LANGUAGE_CODE == "pt-br"){ ?>

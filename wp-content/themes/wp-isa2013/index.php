@@ -48,9 +48,9 @@
 					$rv_query->the_post();
 			?>
 				<h1 class="fs-30 title"><?php the_title(); ?></h1>
-				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
+				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ..."); ?></p>
 				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">
-					&raquo; <?php _e('Inscreva-se', 'wp-isa2013');  ?>
+					&raquo; <?php _e('Inscreva-se', 'wp-isa2013'); ?>
 				</a>
 			<?php }	?>	
 		</div>

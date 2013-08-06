@@ -16,6 +16,7 @@ $share_icons_code =  array(
 
 add_theme_support('post-thumbnails');
 
+// WPML
 define('ICL_LANGUAGE_CODE', true);
 
 add_image_size('article-owner-thumb', 145, 195, true );
@@ -113,6 +114,7 @@ add_action('init', "rv_init");
 function rv_init(){
   PostType::register("Palestras", "palestras", "Palestra", "F", true);
   PostType::register("Artigos", "artigos", "Artigo", "M", true);
+  PostType::register("Workshops", "workshops", "Workshops", "M", true);
   
   // WPML prevent add files on theme
   define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
