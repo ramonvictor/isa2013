@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 	<?php global $baseUrl; ?>
 	<section class="speakers-section group">
+		<?php if(ICL_LANGUAGE_CODE == "pt-br"){ ?>
+		<p class="right fs-12 ff-roboto c-gray" style="margin-top:10px">Palestras com tradução simultânea inglês &raquo; português e linguagens de sinais.</p>
+		<?php } ?>
 		<h1 class="title fw-light c-green">
 			<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
 			14 speakers
@@ -61,7 +64,9 @@
 			?>
 				<h1 class="fs-30 title"><?php the_title(); ?></h1>
 				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
-				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; <?php _e('Submeta seu artigo', 'wp-isa2013');  ?></a>
+				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">
+					&raquo; <?php _e('Submeta seu artigo', 'wp-isa2013');  ?>
+				</a>
 			<?php }	?>
 		</div>
 		<div class="highlight-section melon-green-box">
@@ -74,7 +79,9 @@
 			?>
 			<h1 class="fs-30 title"><?php the_title(); ?></h1>
 			<p><?php echo Geral::my_excerpt($post->post_content, 19, " ...") ?></p>
-			<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">&raquo; <?php _e('Acompanhe', 'wp-isa2013');  ?></a>
+			<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">
+				&raquo; <?php _e('Acompanhe', 'wp-isa2013');  ?>
+			</a>
 			<?php }	?>	
 		</div>
 	</section>
