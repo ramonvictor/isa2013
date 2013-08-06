@@ -41,7 +41,7 @@
 	<!-- facebook meta -->
 	<meta property="og:title" content="Interaction South America 13 - Recife / Brasil"/>
 	<meta property="og:url" content="<?php echo $homeUrl; ?>"/>
-	<meta property="og:image" content="http://isa.ixda.org/2013/isa13-facebook.png" />
+	<meta property="og:image" content="http://www.isa.ixda.org/2013/isa13-facebook.png" />
 	<meta property="og:description" content="Novas indústrias, novos modelos, novas interações. O Interaction South America é uma conferência anual que reúne profissionais e acadêmicos de Design e áreas relacionadas para participarem de Conversas, Palestras, Workshops e outras atividades para discutir sobre o papel do Design de Interação e o perfil do profissional no mercado e sua atuação na construção de uma nova economia."/>
 
 	<!-- viewport -->
