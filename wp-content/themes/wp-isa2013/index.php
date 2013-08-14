@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-	<?php global $baseUrl; ?>
+	<?php 
+		global $baseUrl;
+		global $homeUrl;
+	?>
 	<section class="speakers-section group">
 		<?php if(ICL_LANGUAGE_CODE == "pt-br"){ ?>
 		<p class="right fs-12 ff-roboto c-gray" style="margin-top:10px">Palestras com tradução simultânea inglês &raquo; português e linguagens de sinais.</p>
@@ -49,7 +52,7 @@
 			?>
 				<h1 class="fs-30 title"><?php the_title(); ?></h1>
 				<p><?php echo Geral::my_excerpt($post->post_content, 19, " ..."); ?></p>
-				<a href="<?php the_permalink(); ?>" class="highlight-section-btn fs-15">
+				<a href="<?php echo $homeUrl; ?>/workshops" class="highlight-section-btn fs-15">
 					&raquo; <?php _e('Inscreva-se', 'wp-isa2013'); ?>
 				</a>
 			<?php }	?>	
