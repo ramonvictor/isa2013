@@ -29,9 +29,9 @@
 						<p>
 							<strong class="c-orange">
 								<?php if(ICL_LANGUAGE_CODE == "en"){ ?>
-								Registration will be opened 14 August at 2pm (Brasília, GMT-03:00)
+								Registration will be opened 15 August at 2pm (Brasília, GMT-03:00)
 								<?php } else { ?>
-								Inscrições serāo abertas no dia 14/08
+								Inscrições serāo abertas no dia 15/08
 								<?php } ?>								
 							</strong>
 						</p>
