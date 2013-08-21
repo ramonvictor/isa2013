@@ -85,7 +85,6 @@ add_action('login_head', 'rv_custom_login_logo');
 // admin css
 function custom_css() {
     echo '<link rel="stylesheet" href="'. get_bloginfo('template_url') .'/css/admin.css" />';
-    
 }
 add_action('admin_head', 'custom_css');
 
